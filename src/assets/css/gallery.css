@@ -1,0 +1,118 @@
+
+main {
+    height: calc(100vh - 3rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerLeft {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.containerLeft .category {
+    width: 8rem;
+    aspect-ratio: 1;
+    border-radius: 0.8rem;
+    background-color: rgb(183, 173, 130);
+    box-shadow: -8px -7px 66px -28px rgba(0, 0, 0, 1);
+    position: absolute;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerLeft .category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.8rem;
+}
+.containerLeft .category ion-icon {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+.containerLeft :nth-child(1) {
+    top: 25%;
+}
+
+.containerLeft :nth-child(1):hover {
+    top: 20%;
+    transition: 0.5s;
+}
+
+.containerLeft :nth-child(2) {
+    top: 35%;
+}
+
+.containerLeft :nth-child(2):hover {
+    top: 30%;
+    transition: 0.5s;
+}
+
+.containerLeft :nth-child(3) {
+    top: 45%;
+}
+
+.containerLeft :nth-child(3):hover {
+    top: 40%;
+    transition: 0.5s;
+}
+
+.containerLeft :nth-child(4) {
+    top: 55%;
+}
+
+.containerLeft :nth-child(4):hover {
+    top: 54%;
+    transition: 0.5s;
+}
+
+.containerRight {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    overflow: scroll;
+}
+
+.containerRight .column {
+    flex: 1;
+    margin: 1rem;
+}
+
+.containerRight .column img {
+    width: 100%;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+    box-shadow: -4px -2px 16px -3px rgba(156,156,156,1);
+}
+
+@media screen and (max-width: 860px) {
+    main {
+        flex-direction: column;
+    }
+
+    .containerLeft {
+        width: 100%;
+        height: auto;
+        position: inherit;
+        flex-direction: row;
+    }
+
+    .containerLeft .category {
+        position: inherit;
+        width: 5rem;
+        height: 5rem;
+        margin: 0.5rem;
+    }
+
+}

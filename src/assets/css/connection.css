@@ -1,0 +1,68 @@
+body {
+    background-image: url(/assets/img/sea-7375377.jpg);
+    background-position: static;
+    background-size: cover;
+}
+
+main {
+    height: calc(100vh - 3rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainContainer {
+    width: 40rem;
+    height: 60vh;
+    border-radius: 1rem;
+    margin: 2rem;
+    color: rgb(255, 255, 255);
+    background-color: rgba(167, 167, 167, 0.2);
+    box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
+    backdrop-filter: blur(0.8rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+.mainContainer div h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.mainContainer .signinField{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    
+}
+.mainContainer .signinField form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContainer .signinField form > input {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    margin: 0.8rem 0 1.4rem 0;
+    color: white;
+    border: none;
+    border-bottom: 0.1rem solid white;
+    outline: none;
+    background: none;
+}
+
+
+.mainContainer div button {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: rgba(167, 167, 167, 0.5);
+}
+.mainContainer div button:hover{
+    background-color: #11343d
+}

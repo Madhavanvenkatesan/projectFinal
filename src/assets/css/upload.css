@@ -1,0 +1,117 @@
+body {
+    background-image: url(/assets/img/sea-7375377.jpg);
+    background-size: cover;
+    color: white;
+    font-size: 0.9rem;
+}
+main {
+    display: flex;
+}
+.slideLeft {
+    width: 17rem;
+    height: 100vh;
+    background-color: rgba(167, 167, 167, 0.2);
+    backdrop-filter: blur(0.8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+.profileInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.profilePhoto {
+    width: 5rem;
+    aspect-ratio: 1;
+    margin: 1rem;
+    border-radius: 10rem;
+    background-color: rgb(255, 255, 255);
+}
+.profileName {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.menuList {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+.ControleButton button{
+    background-color: #11343d;
+}
+.menuList:hover{
+    background-color: #11343d;
+}
+.menuList:first-child{
+    background-color: #11343d;
+}
+
+.contentRight {
+    height: 100vh;
+    width: calc(100% - 17rem);
+    background-color: #ebebeb00;
+}
+.contentRight  .name {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(167, 167, 167, 0.2);
+    backdrop-filter: blur(0.8rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+.gallery .images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.gallery .images  div {
+width: 5rem;
+height: 5rem;
+margin: 2rem;
+background-color: #11343d;
+}  
+@media screen and (max-width:1000px) {
+    .slideLeft {
+        width: 10rem;
+    }
+
+    .contentRight {
+        width: calc(100% - 10rem);
+    }
+}
+
+@media screen and (max-width:860px) {
+    .slideLeft {
+        position: absolute;
+        left: -10rem;
+        z-index: 1;
+    }
+
+    .slideLeftActive {
+        left: 0rem;
+    }
+
+    #menuBurger {
+        position: absolute;
+        display: flex;
+        right: -3rem;
+    }
+
+    .contentRight {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:675px) {
+    .gallery {
+        flex-direction: column;
+        width: 70%;
+    }
+}

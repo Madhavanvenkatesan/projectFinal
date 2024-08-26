@@ -1,0 +1,248 @@
+body {
+    background-image: url(/assets/img/sea-7375377.jpg);
+    background-size: cover;
+    color: white;
+    font-size: 0.9rem;
+}
+main {
+    display: flex;
+}
+.slideLeft {
+
+    width: 20rem;
+    height: 100vh;
+    border-radius: 0 1rem 1rem 0;
+    background-color: rgba(167, 167, 167, 0.2);
+    box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
+    backdrop-filter: blur(0.8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+.profileInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.profilePhoto {
+    width: 5rem;
+    aspect-ratio: 1;
+    margin: 1rem;
+    border-radius: 10rem;
+    background-color: rgb(255, 255, 255);
+}
+.profileName {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.menuList {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+.menuList:hover,
+.ControleButton button:hover {
+    background-color: #11343d;
+}
+.contentRight {
+    height: 100vh;
+    width: calc(100% - 20rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ebebeb00;
+}
+.gallery {
+    width: 90%;
+    height: 10rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(167, 167, 167, 0.2);
+    box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
+    backdrop-filter: blur(0.8rem);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.gallery a {
+    flex: 1;
+    height: 90%;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(167, 167, 167, 0);
+    box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
+    backdrop-filter: blur(0.8rem);
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.createUser {
+    width: 40rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    color: rgb(255, 255, 255);
+    background-color: rgba(167, 167, 167, 0.2);
+    box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
+    backdrop-filter: blur(0.8rem);
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+.createUser div h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+.createUser .signinField {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+}
+.createUser .signinField form {
+    display: flex;
+    flex-direction: column;
+}
+.createUser .signinField form>input {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    margin: 0.4rem 0 1rem 0;
+    color: white;
+    border: none;
+    border-bottom: 0.1rem solid white;
+    outline: none;
+    background: none;
+}
+.createUser div button {
+    font-size: 1rem;
+    margin: 1rem;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: rgba(167, 167, 167, 0.5);
+}
+.createUser div button:hover {
+    background-color: #11343d
+}
+.users {
+    width: 90%;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(167, 167, 167, 0.2);
+    box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
+    backdrop-filter: blur(0.8rem);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.list ul:nth-child(odd) {
+    background-color: rgba(128, 128, 128, 0.349);
+}
+.list {
+    width: 100%;
+    display: table;
+    margin: 1em;
+}
+.list ul {
+    display: table-row;
+}
+.list ul:first-child li {
+    background-color: rgba(239, 239, 239, 0.2);
+    font-size: 1rem;
+}
+.deleteButton {
+    align-self: center;
+}
+.list ul>li {
+    display: table-cell;
+    padding: .5em 1em;
+}                           
+.active {
+    display: flex;
+}
+@media screen and (max-width:1000px) {
+    .slideLeft {
+        width: 10rem;
+    }
+
+    .contentRight {
+        width: calc(100% - 10rem);
+    }
+    .createUser, .users, .list {
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width:860px) {
+    .slideLeft {
+        position: absolute;
+        left: -10rem;
+        z-index: 1;
+    }
+
+    .slideLeftActive {
+        left: 0rem;
+    }
+
+    #menuBurger {
+        position: absolute;
+        display: flex;
+        right: -3rem;
+    }
+
+    .contentRight {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:675px) {
+    .gallery {
+        height: 60vh;
+        flex-direction: column;
+    }
+    .gallery a{
+        width: 90%;
+    }
+    .list ul {
+        border: solid 1px #ccc;
+        border-radius: 1rem;
+        display: block;
+        list-style: none;
+        margin: 1em;
+        padding: .5em 1em;
+    }
+
+    .list ul:first-child {
+        display: none;
+    }
+
+    .list ul>li {
+        display: block;
+        padding: .25em 0;
+    }
+
+    .list ul>li:before {
+        color: #ffffff;
+        content: attr(data-label);
+        display: inline-block;
+        text-transform: capitalize;
+        vertical-align: top;
+        width: 50%;
+    }
+
+    .deleteButton {
+        text-align: start;
+    }
+
+}

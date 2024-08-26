@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
+
+body {
+    font-family: "Saira", sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    height: 100vh;
+    width: auto;
+    background-image: url(/assets/img/love-6600904_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: .3s;
+}
+
+
+.headContent {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.headLeft {
+    height: 70%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.headName {
+    font-family: "Kolker Brush", cursive;
+    font-size: clamp(6rem, 10vw, 9rem);
+    font-style: normal;
+    color: #ffffff;
+    animation: name 1s;
+    transition: ease-in-out;
+
+}
+
+.headDescrip {
+    color: #FFE381;
+    font-size: 2rem;
+    animation: headDescrip 1s;
+    transition: ease-in-out;
+}
+
+#headButton {
+    margin: 1rem 0;
+    padding: .5rem .8rem;
+    background: none;
+    box-shadow: none;
+    color: #ffffff;
+    border: .1rem solid #FFE381;
+    border-radius: .3rem;
+    animation: headButton 1.5s;
+    transition: ease-in-out;
+}
+
+#headButton:hover {
+    color: #FFE381;
+    background-color: rgba(36, 36, 36, 0.5);
+    backdrop-filter: blur(0.3rem);
+    border: .1rem solid rgba(36, 36, 36, 0.5);
+    ;
+}
+
+.headRight {
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imgDiv1 {
+    display: flex;
+    position: relative;
+}
+
+.imgDiv2 {
+    display: flex;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.imgDiv3 {
+    display: flex;
+    position: relative;
+}
+
+.imgDiv1 .triangle1 {
+    width: 12rem;
+    height: 9.5rem;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: rgba(34, 34, 34, 0.28);
+    background-size: cover;
+    background-position: center;
+}
+
+.imgDiv1 .triangle2 {
+    width: 12rem;
+    height: 9.5rem;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    background-image: url(/assets/img/boy-5355710_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 7.1rem;
+
+}
+
+.imgDiv2 .triangle1 {
+    width: 12rem;
+    height: 9.5rem;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: rgba(34, 34, 34, 0.28);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 7.1rem;
+
+}
+
+.imgDiv2 .triangle2 {
+    width: 12rem;
+    height: 9.5rem;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    background-image: url(/assets/img/boy-5355710_1920.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.imgDiv3 .triangle2 {
+    width: 12rem;
+    height: 9.5rem;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    background-image: url(/assets/img/boy-5355710_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 7.1rem;
+}
+
+.mainLogo {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainLogo>img {
+    width: clamp(8rem, 15vw, 15rem);
+    margin: 3rem;
+}
+
+.Carousel {
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide .item {
+    width: 15rem;
+    height: 20rem;
+    top: 2rem;
+    position: absolute;
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1) {
+    left: calc(50% - 61rem);
+    opacity: 0%;
+}
+
+.slide .item:nth-child(2) {
+    left: calc(50% - 43.5rem);
+    filter: brightness(75%);
+}
+
+.slide .item:nth-child(3) {
+    left: calc(50% - 26rem);
+}
+
+.slide .item:nth-child(4) {
+    width: 17rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slide .item:nth-child(5) {
+    left: calc(50% + 11rem);
+}
+
+.slide .item:nth-child(6) {
+    left: calc(50% + 28.5rem);
+    filter: brightness(75%);
+
+}
+
+.slide .item:nth-child(n+7) {
+    left: calc(50% + 46rem);
+    opacity: 0%;
+}
+
+.controlCarousel {
+    top: 2rem;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controlCarousel button {
+    width: 30rem;
+    height: 20rem;
+    font-size: 3rem;
+    border: 0;
+    padding: 0;
+    color: #ffffff;
+    background-color: rgba(139, 139, 139, 0);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.controlCarousel .prev {
+    text-align: start;
+    padding: 1rem;
+}
+
+.controlCarousel .next {
+    text-align: end;
+    padding: 1rem;
+}
+
+.controlCarousel .prev .active {
+    color: rgb(255, 0, 0);
+}
+
+.controlCarousel .next .active {
+    color: red;
+}
+
+.mainContent {
+    width: 100%;
+    margin: 3rem 0;
+
+}
+
+.subContentLeft {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subContentRight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-top: 4rem;
+}
+
+.subContentLeft .sideBlock {
+    width: 50%;
+    height: 22rem;
+    margin-top: 4rem;
+    background-color: #cc9260;
+    border-radius: 0 12rem 12rem 0;
+    box-shadow: 0 5px 30px #505050;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.subContentLeft .sideBlock>img {
+    width: 70%;
+    height: 90%;
+    margin: 1rem;
+    object-fit: cover;
+    border-radius: 0 12rem 12rem 0;
+}
+
+.subContentRight .sideBlock {
+    width: 50%;
+    height: 22rem;
+    margin-top: 4rem;
+    background-color: #676b3d;
+    border-radius: 12rem 0 0 12rem;
+    box-shadow: 0 5px 30px #505050;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.subContentRight .sideBlock>img {
+    width: 70%;
+    height: 90%;
+    margin: 1rem;
+    object-fit: cover;
+    border-radius: 12rem 0 0 12rem;
+}
+
+.subContentText {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .mainContent {
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .subContent {
+        height: 16rem;
+    }
+
+    .subContentLeft .sideBlock>img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .subContentRight .sideBlock>img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .subContentText {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    header>img {
+        height: 80vh;
+    }
+
+    .Carousel {
+        height: 25rem;
+    }
+
+    .slide .item {
+        width: 10rem;
+        height: 15rem;
+    }
+
+    .slide .item:nth-child(2) {
+        left: calc(50% - 30rem);
+    }
+
+    .slide .item:nth-child(3) {
+        left: calc(50% - 18rem);
+    }
+
+    .slide .item:nth-child(4) {
+        width: 12rem;
+    }
+
+    .slide .item:nth-child(5) {
+        left: calc(50% + 8rem);
+    }
+
+    .slide .item:nth-child(n+6) {
+        left: calc(50% + 20rem);
+    }
+
+    .controlCarousel button {
+        width: 20rem;
+        height: 15rem;
+    }
+
+    .mainContent {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .subContentLeft .sideBlock {
+        width: 70%;
+        height: 18rem;
+    }
+
+    .subContentRight .sideBlock {
+        width: 70%;
+        height: 18rem;
+    }
+
+    .subContentRight .subContentLeft .sideBlock>img {
+        width: 100%;
+    }
+
+    .subContentText {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    header>img {
+        height: 60vh;
+    }
+
+    .headContent {
+        align-items: start;
+        justify-content: center;
+    }
+
+    .headLeft {
+        align-items: center;
+    }
+
+    .headRight {
+        display: none;
+    }
+
+
+    .Carousel {
+        height: 20rem;
+    }
+
+    .slide .item {
+        width: 8rem;
+        height: 12rem;
+    }
+
+    .slide .item:nth-child(3) {
+        left: calc(50% - 14.5rem);
+    }
+
+    .slide .item:nth-child(4) {
+        width: 10rem;
+    }
+
+    .slide .item:nth-child(5) {
+        left: calc(50% + 6.5rem);
+    }
+
+    .controlCarousel button {
+        height: 12rem;
+    }
+}
+
+@keyframes name {
+    from {
+        transform: translateX(-30rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes headDescrip {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes headButton {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
