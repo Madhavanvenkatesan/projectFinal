@@ -1,91 +1,91 @@
 // Array of image objects with their respective details
-const images = [
-    {
-        name: 'portrait1',
-        height: 1.5094,
-        category: 'portrait'
-    },
-    {
-        name: 'portrait2',
-        height: 1.5023,
-        category: 'portrait'
-    },
-    {
-        name: 'portrait3',
-        height: 1.3195,
-        category: 'evenment'
-    },
-    {
-        name: 'portrait4',
-        height: 1.1307,
-        category: 'portrait'
-    },
-    {
-        name: 'portrait5',
-        height: 1.4988,
-        category: 'evenment'
-    },
-    {
-        name: 'family1',
-        height: 1.5384,
-        category: 'family'
-    },
-    {
-        name: 'family2',
-        height: 1.5122,
-        category: 'family'
-    },
-    {
-        name: 'family3',
-        height: 1.5226,
-        category: 'family'
-    },
-    {
-        name: 'family4',
-        height: 1.5384,
-        category: 'family'
-    },
-    {
-        name: 'family5',
-        height: 1.5122,
-        category: 'family'
-    },
-    {
-        name: 'family6',
-        height: 1.5226,
-        category: 'family'
-    },
-    {
-        name: 'nature1',
-        height: 1.5384,
-        category: 'nature'
-    },
-    {
-        name: 'nature2',
-        height: 1.5122,
-        category: 'nature'
-    },
-    {
-        name: 'nature3',
-        height: 1.5226,
-        category: 'nature'
-    },
-    {
-        name: 'nature4',
-        height: 1.5384,
-        category: 'nature'
-    },
-    {
-        name: 'nature5',
-        height: 1.5122,
-        category: 'nature'
-    },
-    {
-        name: 'nature6',
-        height: 1.5226,
-        category: 'nature'
-    }
-];
+// const images = [
+//     {
+//         name: 'portrait1',
+//         height: 1.5094,
+//         category: 'portrait'
+//     },
+//     {
+//         name: 'portrait2',
+//         height: 1.5023,
+//         category: 'portrait'
+//     },
+//     {
+//         name: 'portrait3',
+//         height: 1.3195,
+//         category: 'evenment'
+//     },
+//     {
+//         name: 'portrait4',
+//         height: 1.1307,
+//         category: 'portrait'
+//     },
+//     {
+//         name: 'portrait5',
+//         height: 1.4988,
+//         category: 'evenment'
+//     },
+//     {
+//         name: 'family1',
+//         height: 1.5384,
+//         category: 'family'
+//     },
+//     {
+//         name: 'family2',
+//         height: 1.5122,
+//         category: 'family'
+//     },
+//     {
+//         name: 'family3',
+//         height: 1.5226,
+//         category: 'family'
+//     },
+//     {
+//         name: 'family4',
+//         height: 1.5384,
+//         category: 'family'
+//     },
+//     {
+//         name: 'family5',
+//         height: 1.5122,
+//         category: 'family'
+//     },
+//     {
+//         name: 'family6',
+//         height: 1.5226,
+//         category: 'family'
+//     },
+//     {
+//         name: 'nature1',
+//         height: 1.5384,
+//         category: 'nature'
+//     },
+//     {
+//         name: 'nature2',
+//         height: 1.5122,
+//         category: 'nature'
+//     },
+//     {
+//         name: 'nature3',
+//         height: 1.5226,
+//         category: 'nature'
+//     },
+//     {
+//         name: 'nature4',
+//         height: 1.5384,
+//         category: 'nature'
+//     },
+//     {
+//         name: 'nature5',
+//         height: 1.5122,
+//         category: 'nature'
+//     },
+//     {
+//         name: 'nature6',
+//         height: 1.5226,
+//         category: 'nature'
+//     }
+// ];
 
 // Reference to the container where columns will be added
 const containerRight = document.getElementById('containerRight');
@@ -136,10 +136,10 @@ const setImg = (category) => {
     columns.forEach(column => column.height = 0);
 
     for (let i = 0; i < images.length; i++) {
-        if (category == 'all'||images[i].category == category) {
+        if (category == 'all' || images[i].category == category) {
             // Create a div element to hold the image
             const imageDiv = document.createElement('div');
-            imageDiv.innerHTML = `<img src="assets/img/${images[i].name}.jpg" alt="sportImage">`;
+            imageDiv.innerHTML = `<img src="assets/img/uploads/${images[i].name}" alt="sportImage">`;
             // Find the column with the smallest height and add the image to it
             const small = getSmallColumns();
             small.height += images[i].height;
@@ -150,11 +150,10 @@ const setImg = (category) => {
 
 
 const categories = document.getElementsByClassName('category');
-const categoryNames = ['portrait', 'family', 'nature', 'all'];
 
 for (let i = 0; i < categories.length; i++) {
     categories[i].addEventListener('click', () => {
-        setImg(categoryNames[i]);
+        setImg(categories[i].getAttribute('id_cat'));
     });
 }
 

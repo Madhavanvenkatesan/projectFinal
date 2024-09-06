@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    color: #eeeeee;
 }
 
 body::-webkit-scrollbar {
@@ -177,7 +178,7 @@ header {
     top: 2rem;
     position: absolute;
     border-radius: 20px;
-    box-shadow: 0 30px 50px #505050;
+    box-shadow: 3px 3px 15px #505050;
     background-size: cover;
     display: inline-block;
     transition: 0.5s;
@@ -264,69 +265,61 @@ header {
 
 }
 
-.subContentLeft {
+.subContent1 {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.subContentRight {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    margin-top: 4rem;
-}
-
-.subContentLeft .sideBlock {
-    width: 50%;
-    height: 22rem;
-    margin-top: 4rem;
-    background-color: #cc9260;
-    border-radius: 0 12rem 12rem 0;
-    box-shadow: 0 5px 30px #505050;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
-
-.subContentLeft .sideBlock>img {
-    width: 70%;
-    height: 90%;
-    margin: 1rem;
-    object-fit: cover;
-    border-radius: 0 12rem 12rem 0;
-}
-
-.subContentRight .sideBlock {
-    width: 50%;
-    height: 22rem;
-    margin-top: 4rem;
-    background-color: #676b3d;
-    border-radius: 12rem 0 0 12rem;
-    box-shadow: 0 5px 30px #505050;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
-
-.subContentRight .sideBlock>img {
-    width: 70%;
-    height: 90%;
-    margin: 1rem;
-    object-fit: cover;
-    border-radius: 12rem 0 0 12rem;
-}
-
-.subContentText {
-    width: 50%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #ffc240;
 }
 
+.subContent1 .photo {
+    position: relative;
+    margin: 6rem 5rem 6rem 0;
+    padding: 1.5rem 2rem;
+}
+
+.subContent1 .photo::before{
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    content: "";
+}
+
+.subContent1 .photo::before {
+    left: 0;
+    bottom: 0;
+    border-left:#353535 1rem solid;
+    border-bottom: #eeeeee 1rem solid;
+}
+
+.subContent1 .photo img {
+    width: 13rem;
+}
+
+.subContent1 .about {
+    width: 50%;
+    height: 22rem;
+    padding: 0 1.5rem;
+    color: #474747;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.subContent1 .about ::before{
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    content: "";
+}
+
+.subContent1 .about ::before {
+    top: 0;
+    right: 0;
+    border-right: #353535 1rem solid;
+    border-top: #eeeeee 1rem solid;
+}
 @media screen and (max-width: 1024px) {
     .mainContent {
         width: 100%;
@@ -397,25 +390,49 @@ header {
         width: 100%;
         margin: 1rem 0;
     }
-
-    .subContentLeft .sideBlock {
+    .subContent1 {
+        flex-direction: column;
+    }
+    .subContent1 .photo {
+        position: relative;
+        margin: 4rem 0;
+        padding: 2rem;
+    }
+    .subContent1 .photo img {
+        width: 10rem;
+    }
+    .subContent1 .photo::after{
+        position: absolute;
+        width: 8rem;
+        height: 6rem;
+        content: "";
+    }
+    
+    .subContent1 .photo::after {
+        top: 0;
+        right: 0;
+        border-right: #353535 1rem solid;
+        border-top: #eeeeee 1rem solid;
+    }
+    .subContent1 .about {
         width: 70%;
-        height: 18rem;
+        padding: 1rem 3rem;
+        margin-bottom: 2rem;
     }
-
-    .subContentRight .sideBlock {
-        width: 70%;
-        height: 18rem;
+    .subContent1 .about ::after{
+        position: absolute;
+        width: 8rem;
+        height: 6rem;
+        content: "";
     }
-
-    .subContentRight .subContentLeft .sideBlock>img {
-        width: 100%;
+    
+    .subContent1 .about ::after {
+        bottom:0;
+        left: 0;
+        border-left: #353535 1rem solid;
+        border-bottom: #eeeeee 1rem solid;
     }
-
-    .subContentText {
-        width: 30%;
-    }
-}
+}   
 
 @media screen and (max-width: 600px) {
 

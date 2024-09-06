@@ -64,7 +64,9 @@ textarea {
     background-color: #2727273e;
     outline: none;
 }
-
+textarea {
+    height: 5rem;
+}
 .contactForm .contactField form div {
     display: flex;
     justify-content: space-between;
@@ -74,8 +76,9 @@ textarea {
     width: 45%;
 }
 
-.contactForm div button {
-    margin: 2rem;
+.contactForm button {
+    width: 10rem;
+    margin: 1rem;
     padding: 0.5rem 2rem;
     border-radius: 1rem;
     border: none;
@@ -83,9 +86,10 @@ textarea {
     background-color: rgba(167, 167, 167, 0.5);
     cursor: pointer;
     transition: 0.3s;
+    align-self: center;
 }
 
-.contactForm div button:hover {
+.contactForm button:hover {
     background-color: #11343d
 }
 
@@ -136,6 +140,34 @@ ion-icon {
 
 .socialMedia button:hover {
     background-color: #11343d
+}
+
+.status {
+    min-width: 40%;
+    height: 3rem;
+    border-radius: .5rem;
+    background-color: rgba(111, 255, 123, 0.774);
+    backdrop-filter: blur(.1rem);
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: -2rem;
+    transform: translateX(-50%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.status div {
+    width: 0;
+    height: 0;
+    border-left: .5rem solid transparent;
+    border-right: .5rem solid transparent;
+    border-top: .5rem solid  rgba(111, 255, 123, 0.774);
+    position: absolute;
+    left: 50%;
+    top: 3rem;
+    transform: translateX(-50%);
 }
 
 @media screen and (max-width: 1200px) {
