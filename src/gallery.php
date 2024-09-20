@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav>
-            <div><img src="assets/img/logoWhite.svg" alt="logo"></div>
+            <div><img src="assets/img/svg/logoWhite.svg" alt="logo"></div>
             <div id="navList" class="navList">
                 <li><a href="index.php">ACCUEIL</a></li>
                 <li><a href="gallery.php">GALERIES</a></li>
@@ -37,6 +37,7 @@
         </div>
     </main>
     <script>
+        // Array of image objects with their respective details, json_encode function convert php to js array
         const images = <?= json_encode($photoData) ?>;
     </script>
     <script src="assets/js/gallery.js"></script>

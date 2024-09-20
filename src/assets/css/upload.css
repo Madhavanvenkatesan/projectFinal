@@ -38,6 +38,14 @@ main {
     margin: 1rem;
     border-radius: 10rem;
     background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.profilePhoto img{
+    width: 100%;
+    object-fit: contain;
 }
 
 .profileName {
@@ -58,11 +66,26 @@ main {
 
 .contentRight {
     height: 100vh;
-    width: calc(100% - 17rem);
+    width: calc(100% - 15rem);
     overflow: scroll;
     position: relative;
 }
+.delete {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
 
+.delete button {
+    margin: 1rem;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 1.5rem;
+    color: #f3f3f3;
+    background-color: #954d4d;
+    cursor: pointer;
+}
 .error {
     min-width: 40%;
     height: 3rem;
@@ -218,6 +241,12 @@ form {
         position: absolute;
         display: flex;
         right: -3rem;
+    }
+
+    .burgerDiv,
+    .burgerDiv::after,
+    .burgerDiv::before {
+        background-color: #28493a;
     }
 
     .contentRight {

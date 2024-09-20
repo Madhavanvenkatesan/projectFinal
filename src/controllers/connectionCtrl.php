@@ -18,7 +18,7 @@ if (!empty($_POST)) {
                 if ($checkUser->id_role == 1) {
                     header('Location:admin.php');
                 } else {
-                    header('Location:user.php');
+                    header('Location: user.php?userId=' . $checkUser->id);
                 }
             } else {
                 $error['login_password'] = 'Mot de passe incorrecte';

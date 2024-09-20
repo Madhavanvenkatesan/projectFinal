@@ -35,9 +35,9 @@ if (!empty($_POST['submit']) && !empty($_FILES['image'])) {
         if (in_array($_FILES['image']['type'][$i], $allowedTypes)) {
             // Sanitize the file name to prevent directory traversal attacks
             $photoName = basename($_FILES['image']['name'][$i]);
-            
+
             $photoName = preg_replace("/[^a-zA-Z0-9\.\-_]/", "", $photoName); // Allow only specific characters
-            
+
             // Specify the target directory
             $target = "assets/img/uploads/";
             $targetFile = $target . $photoName;
@@ -130,6 +130,40 @@ if (!empty($_GET) && !empty($_GET['idPhoto'])) {
     exit();
 }
 
+//delete all the photos
+if (!empty($_POST) && !empty($_POST['deleteAll'])) {
+    // Sanitize the input to ensure it's an integer
+    $userId = filter_var($_GET['userId'], FILTER_SANITIZE_NUMBER_INT);
+    $category = filter_var($_GET['category'], FILTER_SANITIZE_NUMBER_INT);
+
+    // Delete all photos for the specified user and category
+    $photo->id_user = $userId;
+    $photo->id_category = $category;
+
+    // Retrieve the photo details before deletion
+    $allPhotoDetails = $photo->getPhotosByUserId();
+
+    if ($allPhotoDetails) {
+        if ($photo->deleteAll()) {
+            // Loop through each photo and delete its file from the server
+            for ($i = 0; $i < sizeof($allPhotoDetails); $i++) {
+                $filePath = "assets/img/uploads/". $allPhotoDetails[$i]->name;
+                if (file_exists($filePath)) {
+                    unlink($filePath); // Delete the file from the server
+                }
+            }
+            $error['delete'] = 'All photos deleted successfully.';
+        } else {
+            $error['delete'] = 'Failed to delete the photo from the database.';
+        }
+    } else {
+        $error['delete'] = 'Photo not found.';
+    }
+
+    // Redirect back to the upload page
+    header('Location: upload.php?userId=' . $userId . '&category=' . $category);
+}
+
 
 //display list of photos
 $photo->id_category = filter_var($_GET['category'], FILTER_SANITIZE_NUMBER_INT);
@@ -139,5 +173,3 @@ $listOfUserPhotos = $photo->getPhotosByUserIdAndCat();
 
 // Display list of photos
 $listOfUserPhotos = $photo->getPhotosByUserIdAndCat();
-
-

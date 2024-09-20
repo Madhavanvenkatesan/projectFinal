@@ -33,17 +33,16 @@ require 'controllers/adminCtrl.php';
                 <a href="userList.php">
                     <div class="menuList">Users</div>
                 </a>
-                <a href="uploadGallery.php">
+                <a href="category.php">
                     <div class="menuList">Gallery</div>
                 </a>
             </div>
             <a class="menuList" href="controllers/logout.php">sign out</a>
         </div>
-        <div class="contentRight">
-            
+        <div class="contentRight">    
         </div>
     </main>
-    <script src="assets/js/script.js"></script>
+
     <script src="assets/js/admin.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>

@@ -1,0 +1,184 @@
+body {
+    background-color: #f3f3f3;
+    color: white;
+    font-size: 0.9rem;
+}
+
+a {
+    color: inherit !important;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+}
+
+.slideLeft {
+    width: 15rem;
+    height: 100vh;
+    background-color: rgba(6, 75, 49, 0.806);
+    backdrop-filter: blur(0.8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.profileInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profilePhoto {
+    width: 5rem;
+    aspect-ratio: 1;
+    margin: 1rem;
+    border-radius: 10rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.profilePhoto img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.profileName {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.menuList {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.menuList:hover {
+    background-color: #28493a;
+}
+
+.contentRight {
+    height: 100vh;
+    width: calc(100% - 15rem);
+    overflow: scroll;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.download {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.download button {
+    margin: 1rem;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 1.5rem;
+    color: #f3f3f3;
+    background-color: #517062;
+    cursor: pointer;
+}
+
+.gallery .images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery .images div {
+    width: 20%;
+    aspect-ratio: 1;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 3px 3px 15px 5px rgb(215, 215, 215);
+    position: relative;
+}
+
+.gallery .images div img {
+    width: 100%;
+    object-fit: contain;
+    transition: transform 0.5s;
+}
+
+.gallery .images div img:hover {
+    transform: scale(1.05);
+}
+
+.selected {
+    filter: brightness(40%);
+}
+#download,#cancel{
+    display: none;
+}
+
+@media screen and (max-width:1000px) {
+    .slideLeft {
+        width: 10rem;
+    }
+
+    .contentRight {
+        width: calc(100% - 10rem);
+    }
+}
+
+@media screen and (max-width:860px) {
+    .slideLeft {
+        position: absolute;
+        left: -10rem;
+        z-index: 1;
+    }
+
+    .slideLeftActive {
+        left: 0rem;
+    }
+
+    #menuBurger {
+        position: absolute;
+        display: flex;
+        right: -3rem;
+    }
+
+    .burgerDiv,
+    .burgerDiv::after,
+    .burgerDiv::before {
+        background-color: #28493a;
+    }
+
+    .contentRight {
+        width: 100%;
+    }
+
+    .gallery .images div {
+        width: 26%;
+    }
+}
+
+@media screen and (max-width:675px) {
+    .gallery {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .gallery .images div {
+        width: 40%;
+    }
+}

@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav>
-            <div><img src="assets/img/logoWhite.svg" alt="logo"></div>
+            <div><img src="assets/img/svg/logoWhite.svg" alt="logo"></div>
             <div id="navList" class="navList">
                 <li><a href="index.php">ACCUEIL</a></li>
                 <li><a href="gallery.php">GALERIES</a></li>
@@ -48,17 +48,16 @@
         </div>
     </header>
     <main>
-        <div class="mainLogo"><img src="assets/img/logoBlack.svg" alt="logo_image"></div>
+        <div class="mainLogo"><img src="assets/img/svg/logoBlack.svg" alt="logo_image"></div>
         <div class="Carousel">
-            <div class="slide">
+        <div class="slide">
                 <div class="item" style="background-image:url(./assets/img/portrait1.jpg);"></div>
                 <div class="item" style="background-image:url(./assets/img/portrait2.jpg);"></div>
                 <div class="item" style="background-image:url(./assets/img/portrait3.jpg);"></div>
                 <div class="item" style="background-image:url(./assets/img/portrait4.jpg);"></div>
                 <div class="item" style="background-image:url(./assets/img/portrait5.jpg);"></div>
-                <div class="item" style="background-image:url(./assets/img/portrait3.jpg);"></div>
-                <div class="item" style="background-image:url(./assets/img/portrait4.jpg);"></div>
-
+                <div class="item" style="background-image:url(./assets/img/portrait6.jpg);"></div>
+                <div class="item" style="background-image:url(./assets/img/portrait7.jpg);"></div>
             </div>
             <div class="controlCarousel">
                 <button id="prev" class="prev"><ion-icon name="chevron-back-outline"></ion-icon></button>
@@ -68,7 +67,7 @@
         <div class="mainContent">
             <div class="subContent1">
                 <div class="photo">
-                    <img src="assets/img/image.png" alt="photo">
+                    <img src="assets/img/photo-bg.png" alt="photo">
                 </div>
                 <div class="about">
                     <h2>I'm Madhavan</h2>
@@ -84,16 +83,16 @@
         </div>
     </main>
     <footer>
-        <img class="logoFooter" src="assets/img/logoWhite.svg" alt="logo">
+        <img class="logoFooter" src="assets/img/svg/logoWhite.svg" alt="logo">
         <div class="logoContact">
-            <a href="https://www.instagram.com/" target=”_blank”><img src="assets/img/insta.svg" alt="instaLogo"></a>
-            <a href="https://web.whatsapp.com/" target=”_blank”><img src="assets/img/Whatsapp.svg"
+            <a href="https://www.instagram.com/" target=”_blank”><img src="assets/img/svg/insta.svg" alt="instaLogo"></a>
+            <a href="https://web.whatsapp.com/" target=”_blank”><img src="assets/img/svg/Whatsapp.svg"
                     alt="whatsappLogo"></a>
-            <a href="https://www.facebook.com/" target=”_blank”><img src="assets/img/fb.svg" alt="fbLogo"></a>
-            <a href="https://x.com/?lang=en" target=”_blank”><img src="assets/img/x.svg" alt="xLogo"></a>
+            <a href="https://www.facebook.com/" target=”_blank”><img src="assets/img/svg/fb.svg" alt="fbLogo"></a>
+            <a href="https://x.com/?lang=en" target=”_blank”><img src="assets/img/svg/x.svg" alt="xLogo"></a>
         </div>
         <div class="copyRight">
-            <img src="assets/img/copyright.svg" alt="copyright">
+            <img src="assets/img/svg/copyright.svg" alt="copyright">
             <p>Copyright reserved iniyan studios</p>
         </div>
 

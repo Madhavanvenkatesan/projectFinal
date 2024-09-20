@@ -18,6 +18,7 @@ main {
     background-color: rgba(167, 167, 167, 0.2);
     box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
     backdrop-filter: blur(0.8rem);
+    -webkit-backdrop-filter: blur(0.8rem);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,6 +32,7 @@ main {
     background-color: rgba(167, 167, 167, 0.2);
     box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
     backdrop-filter: blur(0.8rem);
+    -webkit-backdrop-filter: blur(0.8rem);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -148,6 +150,7 @@ ion-icon {
     border-radius: .5rem;
     background-color: rgba(111, 255, 123, 0.774);
     backdrop-filter: blur(.1rem);
+    -webkit-backdrop-filter: blur(0.1rem);
     position: absolute;
     z-index: 5;
     left: 50%;

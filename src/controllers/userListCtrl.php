@@ -12,6 +12,10 @@ if ($_SESSION['id_role'] !== 1)
     header('Location: index.html');
 
 //delete a user
+if (!empty($_GET) && !empty($_GET['userId'])) {
+    $user_id = $_GET['userId'];
+}
+
 if (!empty($_GET) && !empty($_GET['deleteId'])) {
     $user->id = $_GET['deleteId'];
     $user->delete();

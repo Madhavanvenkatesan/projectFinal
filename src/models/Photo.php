@@ -44,7 +44,28 @@ class Photo extends Database
         $queryExecute->bindValue(':id', $this->id, PDO::PARAM_INT);
         return $queryExecute->execute();
     }
-
+    public function deleteAll()
+    {
+        $query = "DELETE FROM `yuga_photos` WHERE `id_user` = :id_user;";
+        $queryExecute = $this->db->prepare($query);
+        $queryExecute->bindValue(':id_user', $this->id_user, PDO::PARAM_INT);
+        return $queryExecute->execute();
+    }
+    public function deleteAllByCategory()
+    {
+        $query = "DELETE FROM `yuga_photos` WHERE `id_category` = :id_category;";
+        $queryExecute = $this->db->prepare($query);
+        $queryExecute->bindValue(':id_category', $this->id_category, PDO::PARAM_INT);
+        return $queryExecute->execute();
+    }
+    function getPhotosByUserId()
+    {
+        $query = "SELECT * FROM `yuga_photos` WHERE `id_user` = :id_user;";
+        $queryExecute = $this->db->prepare($query);
+        $queryExecute->bindValue(':id_user', $this->id_user, PDO::PARAM_STR);
+        $queryExecute->execute();
+        return $queryExecute->fetchAll(PDO::FETCH_OBJ);
+    }
     function getPhotosByUserIdAndCat()
     {
         $query = "SELECT * FROM `yuga_photos` WHERE `id_user` = :id_user AND `id_category` = :id_category;";

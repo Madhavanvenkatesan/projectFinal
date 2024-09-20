@@ -20,12 +20,12 @@ require 'controllers/uploadCtrl.php';
                 <div id="burgerDiv" class="burgerDiv"></div>
             </button>
             <div class="profileInfo">
-                <div class="profilePhoto"></div>
+                <div class="profilePhoto"><img src="assets/img/uploads/<?= $listOfUserPhotos[0]->name ?>" alt="photos"></div>
                 <div class="profileName">profile of <?= $userProfile->firstname ?></div>
             </div>
             <div>
-                <a href="admin.php">
-                    <div class="menuList">Dashboard</div>
+                <a href="userList.php">
+                    <div class="menuList">Back</div>
                 </a>
                 <a href="controllers/logout.php">
                     <div class="menuList">sign out</div>
@@ -33,6 +33,11 @@ require 'controllers/uploadCtrl.php';
             </div>
         </div>
         <div class="contentRight">
+            <div class="delete">
+                <form method="post">
+                    <button name="deleteAll" value="deleteAll" id="deleteAll">Delete all<ion-icon name="trash"></ion-icon></button>
+                </form>
+            </div>
             <div class="error">
                 <p><?php if (!empty($error) && !empty($error['upload'])) { ?>
                         <!-- Show the popup and close the popup after 2 seconds -->
@@ -64,9 +69,10 @@ require 'controllers/uploadCtrl.php';
                         ?>
                         <div class="photoCard">
                             <img src="assets/img/uploads/<?= $listOfUserPhotos[$i]->name ?>" alt="photos">
-                            <a href="upload.php?userId=<?= $listOfUserPhotos[$i]->id_user ?>&&category=<?= $listOfUserPhotos[$i]->id_category ?>&&idPhoto=<?= $listOfUserPhotos[$i]->id ?>">
+                            <a
+                                href="upload.php?userId=<?= $listOfUserPhotos[$i]->id_user ?>&&category=<?= $listOfUserPhotos[$i]->id_category ?>&&idPhoto=<?= $listOfUserPhotos[$i]->id ?>">
                                 <button>
-                                <ion-icon name="remove"></ion-icon>
+                                    <ion-icon name="remove"></ion-icon>
                                 </button>
                             </a>
                         </div>
@@ -75,8 +81,7 @@ require 'controllers/uploadCtrl.php';
             </div>
         </div>
     </main>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/upload.js"></script>
+    <script src="assets/js/admin.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </body>
 

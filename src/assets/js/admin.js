@@ -1,5 +1,6 @@
-//Menu burger
+//Menu burger for slider
 const slideLeft = document.getElementById('slideLeft');
+const burgerDiv = document.getElementById('burgerDiv'); 
 menuBurger.addEventListener('click', () => {
     slideLeft.classList.toggle('slideLeftActive');
     burgerDiv.classList.toggle('active');
@@ -96,5 +97,3 @@ const nonEditable = (i, reset = false) => {
         inputs[y].classList.remove('inputActive');
     }
 }
-
-

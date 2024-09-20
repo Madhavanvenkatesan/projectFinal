@@ -16,7 +16,7 @@ require 'controllers/connectionCtrl.php';
 <body>
     <header>
         <nav>
-            <div><img src="assets/img/logoWhite.svg" alt="logo"></div>
+            <div><img src="assets/img/svg/logoWhite.svg" alt="logo"></div>
             <div id="navList" class="navList">
                 <li><a href="index.php">ACCUEIL</a></li>
                 <li><a href="gallery.php">GALERIES</a></li>

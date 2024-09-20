@@ -7,7 +7,7 @@ class Database
     {
         try {
 
-            $this->db = new PDO('mysql:host=172.18.0.2;dbname=iniyan_studios;charset=utf8', 'root', 'pw');
+            $this->db = new PDO('mysql:host=mysql;dbname=iniyan_studios;charset=utf8', 'root', 'pw');
         } catch (Exception $e) {
             die('Erreur : ' . $e->getMessage());
         }

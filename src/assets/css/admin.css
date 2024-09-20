@@ -4,6 +4,7 @@ body {
     background-attachment: fixed;
     color: white;
     font-size: 0.9rem;
+    position: relative;
 }
 
 main {
@@ -17,6 +18,7 @@ main {
     background-color: rgba(167, 167, 167, 0.2);
     box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
     backdrop-filter: blur(0.8rem);
+    -webkit-backdrop-filter: blur(0.8rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -54,6 +56,7 @@ main {
 a {
     color: inherit;
     text-decoration: none;
+    z-index: 1;
 }
 
 .menuList:hover,
@@ -65,38 +68,134 @@ a {
     height: 100vh;
     width: calc(100% - 15rem);
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     background-color: #ebebeb00;
 }
 
 .gallery {
     width: 90%;
-    height: 10rem;
     margin: 1rem;
+    padding: 1rem;
     border-radius: 1rem;
     background-color: rgba(167, 167, 167, 0.2);
     box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
     backdrop-filter: blur(0.8rem);
+    -webkit-backdrop-filter: blur(0.8rem);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.gallery a {
-    flex: 1;
-    height: 90%;
-    margin: 1rem;
+.gallery .addCat,  .gallery form{
+    width: 22%;
+    height: 8rem;
+    margin-bottom: 1.5rem;
+}
+.gallery .addCat button {
+    width: 3rem;
+    aspect-ratio: 1;
+    margin: 0.5rem 0;
+    padding: 0;
+    border: none;
+    border-radius: 10rem;
+    color: white;
+    background-color: #62c76480;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery .addCat button:hover{
+    background-color: #11343d;
+}
+
+.gallery .catList,
+.addCat {
+    width: 100%;
+    height: 100%;
     border-radius: 1rem;
     background-color: rgba(167, 167, 167, 0);
     box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
     backdrop-filter: blur(0.8rem);
     text-decoration: none;
     color: inherit;
-    cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.gallery .catList input {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem;
+    border: 0px;
+    cursor: text;
+    color: white;
+    background: none;
+    field-sizing: content;
+}
+
+.gallery .catList .controls {
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.gallery .catList .controls a:hover{
+    background-color: #11343d;
+}
+.gallery .catList .controls .upload {
+    width: 3rem;
+    aspect-ratio: 1;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    padding: 0;
+    border-radius: 10rem;
+    color: white;
+    background-color: #32323280;
+    cursor: pointer;
+    display: none;
+    align-items: center;
     justify-content: center;
+}
+
+.gallery .catList .controls .delete,
+.gallery .catList .controls .update,
+.gallery .catList .controls .ok,
+.gallery .catList .controls .cancel {
+    width: 2rem;
+    aspect-ratio: 1;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    padding: 0;
+    border: none;
+    border-radius: 10rem;
+    color: white;
+    background-color: #32323280;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.act{
+    display: flex !important;
+}
+.gallery .catList .controls .ok:hover{
+    background-color: #72cd7a !important;
+}
+.gallery .catList .controls .cancel:hover{
+    background-color: #c96262 !important;
+}
+.gallery .catList .controls .ok button{
+    color: inherit;
+}
+.actInput{
+    border: 1px solid rgb(218, 218, 218)!important;
+    background: #1d1d1d95 !important;
+    border-radius: 0.4rem !important;
 }
 
 .createUser {
@@ -107,6 +206,7 @@ a {
     background-color: rgba(167, 167, 167, 0.2);
     box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
     backdrop-filter: blur(0.8rem);
+    -webkit-backdrop-filter: blur(0.8rem);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -163,6 +263,7 @@ a {
     background-color: rgba(167, 167, 167, 0.2);
     box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
     backdrop-filter: blur(0.8rem);
+    -webkit-backdrop-filter: blur(0.8rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -230,10 +331,11 @@ small {
     margin: 0 0.3rem;
 }
 
-.edit ion-icon{
+.edit ion-icon {
     color: rgb(224, 224, 224) !important;
 }
-.edit ion-icon:hover{
+
+.edit ion-icon:hover {
     color: rgb(255, 255, 255) !important;
 }
 
@@ -243,7 +345,8 @@ small {
     padding: .5rem .5rem;
     vertical-align: middle;
 }
-a button{
+
+a button {
     background: none;
     border: none;
     font-size: 1.2rem;
@@ -261,8 +364,63 @@ a button{
     display: none;
     cursor: pointer;
 }
+
 .active {
     display: flex;
+}
+
+.popUp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.popUpContent {
+    width: 50%;
+    height: 40%;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popUpContent p {
+    text-align: center;
+}
+
+.popUpContent div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popUpContent div a {
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    border: 0.1px solid rgb(78, 78, 78);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popUpContent div a:hover {
+    background-color: rgb(41, 41, 41);
+    border: none;
+}
+
+.popUpContent div a:first-child:hover {
+    background-color: rgb(112, 35, 35);
+    border: none;
 }
 
 @media screen and (max-width:1000px) {
@@ -309,13 +467,9 @@ a button{
         align-items: start;
     }
 
-    .gallery {
-        height: 60vh;
-        flex-direction: column;
-    }
-
-    .gallery a {
-        width: 90%;
+    .popUpContent {
+        width: 80%;
+        height: 40%;
     }
 
     .list ul {
@@ -349,4 +503,7 @@ a button{
         text-align: start;
     }
 
+    .gallery .addCat,.gallery form{
+        width: 48%;
+    }
 }

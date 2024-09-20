@@ -20,6 +20,7 @@ main {
     background-color: rgba(167, 167, 167, 0.2);
     box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
     backdrop-filter: blur(0.8rem);
+    -webkit-backdrop-filter: blur(0.8rem);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -32,18 +33,19 @@ main {
     margin: 0;
 }
 
-.mainContainer .signinField{
+.mainContainer .signinField {
     display: flex;
     flex-direction: column;
     width: 80%;
-    
+
 }
+
 .mainContainer .signinField form {
     display: flex;
     flex-direction: column;
 }
 
-.mainContainer .signinField form > input {
+.mainContainer .signinField form>input {
     font-size: 1rem;
     padding: 0.5rem 0;
     margin: 0.8rem 0 1.4rem 0;
@@ -65,6 +67,7 @@ main {
     color: rgb(255, 255, 255);
     background-color: rgba(167, 167, 167, 0.5);
 }
-.mainContainer div button:hover{
+
+.mainContainer div button:hover {
     background-color: #11343d
 }
