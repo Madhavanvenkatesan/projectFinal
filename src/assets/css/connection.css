@@ -1,9 +1,11 @@
+/* Background and Body Styles */
 body {
     background-image: url(/assets/img/sea-7375377.jpg);
     background-position: static;
     background-size: cover;
 }
 
+/* Main Layout Configuration */
 main {
     height: calc(100vh - 3rem);
     display: flex;
@@ -11,6 +13,7 @@ main {
     justify-content: center;
 }
 
+/* Main Container Styles */
 .mainContainer {
     width: 35rem;
     height: 60vh;
@@ -25,27 +28,29 @@ main {
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-
 }
 
+/* Heading Styles */
 .mainContainer div h2 {
     font-size: 2rem;
     margin: 0;
 }
 
+/* Sign-in Field Styles */
 .mainContainer .signinField {
     display: flex;
     flex-direction: column;
     width: 80%;
-
 }
 
+/* Form Layout */
 .mainContainer .signinField form {
     display: flex;
     flex-direction: column;
 }
 
-.mainContainer .signinField form>input {
+/* Input Fields Styles */
+.mainContainer .signinField form > input {
     font-size: 1rem;
     padding: 0.5rem 0;
     margin: 0.8rem 0 1.4rem 0;
@@ -56,7 +61,7 @@ main {
     background: none;
 }
 
-
+/* Button Styles */
 .mainContainer div button {
     align-self: center;
     font-size: 1rem;
@@ -68,6 +73,7 @@ main {
     background-color: rgba(167, 167, 167, 0.5);
 }
 
+/* Button Hover Effect */
 .mainContainer div button:hover {
-    background-color: #11343d
+    background-color: #11343d;
 }

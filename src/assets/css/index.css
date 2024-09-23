@@ -1,6 +1,8 @@
+/* Importing fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
 
+/* Global styles for the body */
 body {
     font-family: "Saira", sans-serif;
     height: 100vh;
@@ -10,10 +12,12 @@ body {
     color: #eeeeee;
 }
 
+/* Hide scrollbar */
 body::-webkit-scrollbar {
     display: none;
 }
 
+/* Header styles */
 header {
     height: 100vh;
     width: auto;
@@ -23,7 +27,7 @@ header {
     transition: .3s;
 }
 
-
+/* Flex container for header content */
 .headContent {
     height: 100%;
     display: flex;
@@ -31,6 +35,7 @@ header {
     justify-content: space-around;
 }
 
+/* Left section of the header */
 .headLeft {
     height: 70%;
     display: flex;
@@ -39,6 +44,7 @@ header {
     flex-direction: column;
 }
 
+/* Name styling */
 .headName {
     font-family: "Kolker Brush", cursive;
     font-size: clamp(6rem, 10vw, 9rem);
@@ -46,9 +52,9 @@ header {
     color: #ffffff;
     animation: name 1s;
     transition: ease-in-out;
-
 }
 
+/* Description styling */
 .headDescrip {
     color: #FFE381;
     font-size: 2rem;
@@ -56,6 +62,7 @@ header {
     transition: ease-in-out;
 }
 
+/* Button styling */
 #headButton {
     margin: 1rem 0;
     padding: .5rem .8rem;
@@ -68,15 +75,16 @@ header {
     transition: ease-in-out;
 }
 
+/* Button hover effects */
 #headButton:hover {
     color: #FFE381;
     background-color: rgba(36, 36, 36, 0.5);
     backdrop-filter: blur(0.3rem);
     -webkit-backdrop-filter: blur(0.3rem);
     border: .1rem solid rgba(36, 36, 36, 0.5);
-    ;
 }
 
+/* Right section of the header */
 .headRight {
     padding-bottom: 10%;
     display: flex;
@@ -84,6 +92,7 @@ header {
     flex-direction: column;
 }
 
+/* Image container styles */
 .imgDiv1 {
     display: flex;
     position: relative;
@@ -100,6 +109,7 @@ header {
     position: relative;
 }
 
+/* Triangle shapes in image containers */
 .imgDiv1 .triangle1 {
     width: 12rem;
     height: 9.5rem;
@@ -118,7 +128,6 @@ header {
     background-size: cover;
     position: absolute;
     left: 7.1rem;
-
 }
 
 .imgDiv2 .triangle1 {
@@ -130,7 +139,6 @@ header {
     background-position: center;
     position: absolute;
     left: 7.1rem;
-
 }
 
 .imgDiv2 .triangle2 {
@@ -140,7 +148,6 @@ header {
     background-image: url(/assets/img/boy-5355710_1920.jpg);
     background-position: center;
     background-size: cover;
-
 }
 
 .imgDiv3 .triangle2 {
@@ -154,6 +161,7 @@ header {
     left: 7.1rem;
 }
 
+/* Main logo div */
 .mainLogo {
     margin: 2rem;
     display: flex;
@@ -161,11 +169,13 @@ header {
     justify-content: center;
 }
 
+/* Logo image styling */
 .mainLogo>img {
     width: clamp(8rem, 15vw, 15rem);
     margin: 3rem;
 }
 
+/* Carousel div */
 .Carousel {
     width: 100%;
     height: 30rem;
@@ -173,6 +183,7 @@ header {
     overflow: hidden;
 }
 
+/* Slide item styles */
 .slide .item {
     width: 15rem;
     height: 20rem;
@@ -185,9 +196,8 @@ header {
     transition: 0.5s;
     background-position: center;
 }
-/* .slide .item img{
-    width: 100%;
-} */
+
+/* Positioning for slide items */
 .slide .item:nth-child(1) {
     left: calc(50% - 61rem);
     opacity: 0%;
@@ -215,7 +225,6 @@ header {
 .slide .item:nth-child(6) {
     left: calc(50% + 28.5rem);
     filter: brightness(75%);
-
 }
 
 .slide .item:nth-child(n+7) {
@@ -223,6 +232,7 @@ header {
     opacity: 0%;
 }
 
+/* Control buttons for the carousel */
 .controlCarousel {
     top: 2rem;
     width: 100%;
@@ -232,6 +242,7 @@ header {
     align-items: center;
 }
 
+/* Button styles for controls */
 .controlCarousel button {
     width: 30rem;
     height: 20rem;
@@ -242,9 +253,9 @@ header {
     background-color: rgba(139, 139, 139, 0);
     cursor: pointer;
     transition: 0.3s;
-
 }
 
+/* Control button positioning */
 .controlCarousel .prev {
     text-align: start;
     padding: 1rem;
@@ -255,20 +266,14 @@ header {
     padding: 1rem;
 }
 
-.controlCarousel .prev .active {
-    color: rgb(255, 0, 0);
-}
 
-.controlCarousel .next .active {
-    color: red;
-}
-
+/* Main content styling */
 .mainContent {
     width: 100%;
     margin: 3rem 0;
-
 }
 
+/* Sub content section styling */
 .subContent1 {
     display: flex;
     align-items: center;
@@ -276,39 +281,42 @@ header {
     background-color: #ffc240;
 }
 
+/* Photo styles in sub content */
 .subContent1 .photo {
     position: relative;
     margin: 6rem 5rem 6rem 0;
     padding: 1.5rem 2rem;
 }
 
-.subContent1 .photo::before{
+/* Borders for photo */
+.subContent1 .photo::before {
     position: absolute;
-    width: 6rem;
+    width: 4rem;
     height: 6rem;
     content: "";
-}
-
-.subContent1 .photo::before {
     left: 0;
     bottom: 0;
-    border-left:#353535 1rem solid;
-    border-bottom: #eeeeee 1rem solid;
+    border-left: #e7e7e7 3px solid;
+    border-bottom: #e7e7e7 3px solid;
 }
+
+/* Overlay effect on photo */
 .subContent1 .photo::after {
     content: '';
     position: absolute;
     top: 5%;
     left: 10%;
-    /* transform: translate(-50%, 10px); */
     background: linear-gradient(0deg, #ffc240 5%, transparent 15%);
     width: 80%;
     height: 90%;
 }
+
+/* Image styling in sub content */
 .subContent1 .photo img {
     width: 14rem;
 }
 
+/* About section styling */
 .subContent1 .about {
     width: 50%;
     height: 22rem;
@@ -320,19 +328,20 @@ header {
     flex-direction: column;
     position: relative;
 }
-.subContent1 .about ::before{
+
+/* Borders for about section */
+.subContent1 .about::before {
     position: absolute;
-    width: 6rem;
+    width: 4rem;
     height: 6rem;
     content: "";
+    top: 0rem;
+    right: 0;
+    border-right: #e7e7e7 3px solid;
+    border-top: #e7e7e7 3px solid;
 }
 
-.subContent1 .about ::before {
-    top: 0;
-    right: 0;
-    border-right: #353535 1rem solid;
-    border-top: #eeeeee 1rem solid;
-}
+/* Media query for screens with a max width of 1024px */
 @media screen and (max-width: 1024px) {
     .mainContent {
         width: 100%;
@@ -360,6 +369,7 @@ header {
     }
 }
 
+/* Media query for screens with a max width of 860px */
 @media screen and (max-width: 860px) {
     header>img {
         height: 80vh;
@@ -403,26 +413,35 @@ header {
         width: 100%;
         margin: 1rem 0;
     }
+
     .subContent1 {
         flex-direction: column;
     }
+
     .subContent1 .photo {
-        position: relative;
-        margin: 4rem 0;
-        padding: 2rem;
+        margin: 1rem 0;
+        padding: 1rem;
     }
+    .subContent1 .photo::before {
+        display: none;
+    }
+
     .subContent1 .photo img {
-        width: 10rem;
+        width: 12rem;
     }
+
     .subContent1 .about {
         width: 70%;
         padding: 1rem 3rem;
         margin-bottom: 2rem;
     }
-}   
+    .subContent1 .about::before {
+        display: none;
+    }
+}
 
+/* Media query for screens with a max width of 600px */
 @media screen and (max-width: 600px) {
-
     header>img {
         height: 60vh;
     }
@@ -439,7 +458,6 @@ header {
     .headRight {
         display: none;
     }
-
 
     .Carousel {
         height: 20rem;
@@ -467,6 +485,7 @@ header {
     }
 }
 
+/* Keyframes for animation named 'name' */
 @keyframes name {
     from {
         transform: translateX(-30rem);
@@ -479,6 +498,7 @@ header {
     }
 }
 
+/* Keyframes for animation named 'headDescrip' */
 @keyframes headDescrip {
     from {
         transform: translateY(100vh);
@@ -491,6 +511,7 @@ header {
     }
 }
 
+/* Keyframes for animation named 'headButton' */
 @keyframes headButton {
     from {
         transform: translateY(100vh);

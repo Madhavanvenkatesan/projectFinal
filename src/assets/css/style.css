@@ -9,11 +9,12 @@ body {
     overflow-x: hidden;
 }
 
+/* Hide scrollbar */
 body::-webkit-scrollbar {
     display: none;
 }
 
-/* navigation bar */
+/* Navigation bar styles */
 nav {
     height: 3rem;
     width: 100%;
@@ -28,6 +29,7 @@ nav {
     z-index: 1;
 }
 
+/* Background for the navigation bar */
 nav::before {
     content: '';
     width: 100%;
@@ -41,20 +43,24 @@ nav::before {
     -webkit-backdrop-filter: blur(0.3rem);
 }
 
+/* Flex container for nav items */
 nav>div {
     display: flex;
 }
 
+/* Navigation logo image */
 nav>div>img {
     height: 2rem;
     padding: .8rem;
 }
 
+/* List items in the navigation */
 .navList li {
     padding: 2rem;
     list-style: none;
 }
 
+/* Navigation links */
 .navList li a {
     font-size: 0.9rem;
     color: rgb(255, 255, 255);
@@ -62,6 +68,7 @@ nav>div>img {
     text-decoration: none;
 }
 
+/* Underline effect for links */
 .navList li a::after {
     content: "";
     background-color: rgb(255, 97, 97);
@@ -73,14 +80,14 @@ nav>div>img {
     transition: 0.3s;
 }
 
+/* Hover effect for links */
 .navList li a:hover::after,
 .navList li a:focus::after {
     background-color: #ffffff;
     width: 100%;
 }
 
-/* menu burger */
-
+/* Menu burger button */
 #menuBurger {
     height: 3rem;
     width: 3rem;
@@ -94,6 +101,7 @@ nav>div>img {
     display: none;
 }
 
+/* Styling for the burger div */
 .burgerDiv {
     position: absolute;
     width: 1.5rem;
@@ -104,6 +112,7 @@ nav>div>img {
     transition: 0.3s;
 }
 
+/* Before pseudo-element for burger animation */
 .burgerDiv::before {
     content: "";
     width: 100%;
@@ -115,6 +124,7 @@ nav>div>img {
     transition: 0.4s;
 }
 
+/* After pseudo-element for burger animation */
 .burgerDiv::after {
     content: "";
     width: 100%;
@@ -126,20 +136,24 @@ nav>div>img {
     transition: 0.2s;
 }
 
+/* Active state for burger button */
 .burgerDiv.active {
     transform: rotate(45deg);
 }
 
+/* Transform for the before pseudo-element when active */
 .burgerDiv.active::before {
     top: 0;
     transform: rotate(-270deg);
 }
 
+/* Transform for the after pseudo-element when active */
 .burgerDiv.active::after {
     top: 0;
     transform: rotate(270deg);
 }
 
+/* Flex container for header content */
 .headContent {
     height: 100%;
     display: flex;
@@ -147,7 +161,7 @@ nav>div>img {
     justify-content: space-around;
 }
 
-
+/* Footer styles */
 footer {
     width: 100%;
     background-color: rgb(39, 39, 39);
@@ -157,29 +171,35 @@ footer {
     flex-direction: column;
 }
 
+/* Logo in footer */
 .logoFooter {
     margin-top: 2rem;
 }
 
+/* Footer logo image */
 footer img {
     width: 10rem;
 }
 
+/* Contact logo in footer */
 .logoContact img {
     width: 1.4rem;
     margin: 2rem 0.8rem;
 }
 
+/* Copyright section */
 .copyRight {
     display: flex;
     color: #ffffff;
 }
 
+/* Copyright image */
 .copyRight>img {
     width: 1rem;
     margin-right: 1rem;
 }
 
+/* Responsive styles for smaller screens */
 @media screen and (max-width: 1024px) {
     .navList li {
         padding: 1.5rem;
@@ -190,10 +210,10 @@ footer img {
     .navList li {
         padding: 1rem;
     }
-
 }
 
 @media screen and (max-width: 680px) {
+    /* Styles for mobile nav list */
     .navList {
         height: 0;
         width: 100%;
@@ -208,13 +228,17 @@ footer img {
         transition: 0.3s;
     }
 
+    /* Mobile list item styles */
     .navList li {
         height: 1.2rem;
     }
 
+    /* Show menu burger button */
     #menuBurger {
         display: flex;
     }
+    
+    /* Active state for mobile nav list */
     .navListActive {
         height: 16rem;
     }

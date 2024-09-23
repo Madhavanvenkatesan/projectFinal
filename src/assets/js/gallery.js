@@ -48,6 +48,7 @@ const setImg = (category) => {
     columns.forEach(column => column.height = 0);
 
     for (let i = 0; i < images.length; i++) {
+        // Check if the image belongs to the selected category or if it's in all categories
         if (category == 'all' || images[i].category == category) {
             // Create a div element to hold the image
             const imageDiv = document.createElement('div');
@@ -60,14 +61,14 @@ const setImg = (category) => {
     }
 }
 
+const categories = document.getElementsByClassName('category'); // Select all elements with the class 'category'
 
-const categories = document.getElementsByClassName('category');
-
-for (let i = 0; i < categories.length; i++) {
-    categories[i].addEventListener('click', () => {
-        setImg(categories[i].getAttribute('id_cat'));
+for (let i = 0; i < categories.length; i++) { // Loop through each category element
+    categories[i].addEventListener('click', () => { // Add a click event listener to the current category
+        setImg(categories[i].getAttribute('id_cat')); // Call setImg function with the category's id attribute
     });
 }
+
 
 
 // Function to initialize the gallery based on the window width
