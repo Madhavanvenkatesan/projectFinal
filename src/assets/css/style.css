@@ -1,18 +1,22 @@
+/* Importing fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
 
+/* Global styles for the body */
 body {
     font-family: "Saira", sans-serif;
     height: 100vh;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    color: #eeeeee;
 }
 
 /* Hide scrollbar */
 body::-webkit-scrollbar {
     display: none;
 }
+
 
 /* Navigation bar styles */
 nav {
@@ -22,7 +26,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(36, 36, 36, 0.2);
+    background-color: #24242433;
     backdrop-filter: blur(0.3rem);
     -webkit-backdrop-filter: blur(0.3rem);
     position: relative;
@@ -164,7 +168,7 @@ nav>div>img {
 /* Footer styles */
 footer {
     width: 100%;
-    background-color: rgb(39, 39, 39);
+    background-color:#272727;
     display: flex;
     align-items: center;
     justify-content: center;

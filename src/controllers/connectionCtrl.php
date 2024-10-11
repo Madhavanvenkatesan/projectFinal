@@ -2,7 +2,7 @@
 session_start(); // Start the session
 
 if (!empty($_POST)) { // Check if form is submitted
-    require 'models/User.php'; // Include the User model
+    require '../models/User.php'; // Include the User model
     $user = new User(); // Create a new User object
     $error = []; // Initialize an array to store error messages
 

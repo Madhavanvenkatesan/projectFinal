@@ -1,5 +1,5 @@
 <?php
-require 'controllers/connectionCtrl.php'; // Include the connection controller
+require '../controllers/connectionCtrl.php'; // Include the connection controller
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ require 'controllers/connectionCtrl.php'; // Include the connection controller
 <body>
     <header>
         <!-- import nav bar from UI -->
-        <?php include "ui/nav.php"; ?>
+        <?php include "../ui/nav.php"; ?>
     </header>
     <main>
         <div class="mainContainer"> <!-- Main container for content -->

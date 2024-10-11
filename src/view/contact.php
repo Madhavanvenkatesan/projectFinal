@@ -1,6 +1,6 @@
 <?php
 // Include the contact controller for handling form submissions
-require_once 'controllers/contactCtrl.php'; 
+require_once '../controllers/contactCtrl.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ require_once 'controllers/contactCtrl.php';
 <body>
     <header>
         <!-- import nav bar from UI -->
-        <?php include "ui/nav.php"; ?>
+        <?php include "../ui/nav.php"; ?>
     </header>
     <main>
         <div class="mainContainer">

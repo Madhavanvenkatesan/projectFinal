@@ -1,6 +1,6 @@
 <?php
  // Controller to handle the logic for creating a new user
-require 'controllers/createUserCtrl.php';
+require '../controllers/createUserCtrl.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ require 'controllers/createUserCtrl.php';
 <body>
     <main>
         <!-- Include the sidebar with navigation and user profile -->
-        <?php include "ui/controlSlide.php"; ?>
+        <?php include "../ui/controlSlide.php"; ?>
         
         <!-- Main content container on the right side -->
         <div class="contentRight">

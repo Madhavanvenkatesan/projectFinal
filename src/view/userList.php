@@ -1,6 +1,6 @@
 <?php
 // Include the controller that handles user list logic
-require 'controllers/userListCtrl.php'; 
+require '../controllers/userListCtrl.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ require 'controllers/userListCtrl.php';
 <body>
     <main>
         <!-- Include the sidebar with navigation and user profile -->
-        <?php include "ui/controlSlide.php"; ?> 
+        <?php include "../ui/controlSlide.php"; ?> 
         
         <!-- Main content container -->
         <div class="contentRight"> 

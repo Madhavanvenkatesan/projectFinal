@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'models/Photo.php';
+require '../models/Photo.php';
 
 
 $photo = new Photo();
@@ -14,7 +14,7 @@ if ($_SESSION['id_role'] !== 1)
     header('Location: index.html');
 
 if (!empty($_GET['userId'])) {
-    require 'models/User.php';
+    require '../models/User.php';
     $user = new User();
     $user->id = $_GET['userId'];
     $userProfile = $user->getUserById();
@@ -39,7 +39,7 @@ if (!empty($_POST['submit']) && !empty($_FILES['image'])) {
             $photoName = preg_replace("/[^a-zA-Z0-9\.\-_]/", "", $photoName); // Allow only specific characters
 
             // Specify the target directory
-            $target = "assets/img/uploads/";
+            $target = "../assets/img/uploads/";
             $targetFile = $target . $photoName;
 
             // Ensure unique file name to prevent overwriting
@@ -113,7 +113,7 @@ if (!empty($_GET) && !empty($_GET['idPhoto'])) {
         // Delete the photo from the database
         if ($photo->delete()) {
             // Attempt to delete the photo file from the server
-            $filePath = "assets/img/uploads/" . $photoDetails->name;
+            $filePath = "../assets/img/uploads/" . $photoDetails->name;
             if (file_exists($filePath)) {
                 unlink($filePath); // Delete the file from the server
             }
@@ -147,7 +147,7 @@ if (!empty($_POST) && !empty($_POST['deleteAll'])) {
         if ($photo->deleteAll()) {
             // Loop through each photo and delete its file from the server
             for ($i = 0; $i < sizeof($allPhotoDetails); $i++) {
-                $filePath = "assets/img/uploads/". $allPhotoDetails[$i]->name;
+                $filePath = "../assets/img/uploads/". $allPhotoDetails[$i]->name;
                 if (file_exists($filePath)) {
                     unlink($filePath); // Delete the file from the server
                 }

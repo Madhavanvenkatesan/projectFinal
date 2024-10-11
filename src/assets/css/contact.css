@@ -30,9 +30,9 @@ main {
 .contactForm {
     width: 70%;
     border-radius: 1rem;
-    color: rgb(255, 255, 255);
-    background-color: rgba(167, 167, 167, 0.2);
-    box-shadow: 10px 5px 15px rgba(46, 46, 46, 0.512);
+    color: #ffffff;
+    background-color: #a7a7a733; 
+    box-shadow: 10px 5px 15px #2e2e2e82;
     backdrop-filter: blur(0.8rem);
     display: flex;
     align-items: center;
@@ -87,7 +87,7 @@ textarea {
     border-radius: 1rem;
     border: none;
     color: rgb(255, 255, 255);
-    background-color: rgba(167, 167, 167, 0.5);
+    background-color: #A7A7A780;
     cursor: pointer;
     transition: 0.3s;
     align-self: center;

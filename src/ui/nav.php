@@ -1,6 +1,6 @@
 <nav>
     <!-- Logo of the website displayed in the header -->
-    <div><img src="assets/img/svg/logoWhite.svg" alt="logo"></div>
+    <div><img src="../assets/img/svg/logoWhite.svg" alt="logo"></div>
 
     <!-- Navigation bar with links to various sections/pages -->
     <div id="navList" class="navList">

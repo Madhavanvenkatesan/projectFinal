@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Redirect requests to the view folder
+
+# Avoid infinite loop
+RewriteCond %{REQUEST_URI} !^/view/   
+ # If the file doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f  
+# If the directory doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-d   
+
+RewriteRule ^(.*)$ /view/$1 [L,QSA]

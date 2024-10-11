@@ -1,6 +1,6 @@
 <?php
 // Include the controller responsible for managing user profile logic
-require_once 'controllers/userProfileCtrl.php';
+require_once '../controllers/userProfileCtrl.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,6 @@ require_once 'controllers/userProfileCtrl.php';
         <div id="slideLeft" class="slideLeft">
             <!-- Menu burger button to toggle the sidebar -->
             <button id="menuBurger">
-                <!-- Icon for the burger menu -->
                 <div id="burgerDiv" class="burgerDiv"></div>
             </button>
 
@@ -27,7 +26,7 @@ require_once 'controllers/userProfileCtrl.php';
             <div class="profileInfo">
                 <!-- Show the user's profile photo (the first image uploaded) -->
                 <div class="profilePhoto">
-                    <img src="assets/img/uploads/<?= $userPhotos[0]->name ?>" alt="photos">
+                    <img src="../assets/img/uploads/<?= $userPhotos[0]->name ?>" alt="photos">
                 </div>
                 <!-- Display the user's first name dynamically -->
                 <div class="profileName">Profile of <?= $userProfile->firstname ?></div>
@@ -35,11 +34,9 @@ require_once 'controllers/userProfileCtrl.php';
 
             <!-- Sidebar menu options -->
             <div>
-                <!-- Link to return to the home page -->
                 <a href="index.php">
                     <div class="menuList">Home</div>
                 </a>
-                <!-- Link to log out of the session -->
                 <a href="controllers/logout.php">
                     <div class="menuList">sign out</div>
                 </a>
@@ -50,17 +47,12 @@ require_once 'controllers/userProfileCtrl.php';
         <div class="contentRight">
             <!-- Section for download buttons (download all, selected images, cancel) -->
             <div class="download">
-                <!-- Button to download all images -->
                 <button id="downloadAll">Download all
                     <ion-icon name="download-outline"></ion-icon>
                 </button>
-
-                <!-- Button to download only selected images -->
                 <button id="download">Download
                     <ion-icon name="download-outline"></ion-icon>
                 </button>
-
-                <!-- Button to cancel the selected images -->
                 <button id="cancel">Cancel</button>
             </div>
 
@@ -71,7 +63,7 @@ require_once 'controllers/userProfileCtrl.php';
                     <?php for ($i = 0; $i < sizeof($userPhotos); $i++) { ?>
                         <div class="photoCard">
                             <!-- Display each uploaded photo -->
-                            <img src="assets/img/uploads/<?= $userPhotos[$i]->name ?>" alt="photos">
+                            <img src="../assets/img/uploads/<?= $userPhotos[$i]->name ?>" alt="photos">
                         </div>
                     <?php } ?>
                 </div>
@@ -79,8 +71,8 @@ require_once 'controllers/userProfileCtrl.php';
         </div>
     </main>
 
+    <!-- Include JavaScript -->
     <script src="assets/js/script.js"></script>
-    <!-- Include JavaScript for user-specific functionalities (e.g., selecting images) -->
     <script src="assets/js/user.js"></script>
     <!-- Ionicons library for icons used in buttons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

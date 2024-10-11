@@ -1,3 +1,4 @@
+/* General body styling with background image, fixed position, and font settings */
 body {
     background-image: url(/assets/img/sea-7375377.jpg);
     background-size: cover;
@@ -7,10 +8,12 @@ body {
     position: relative;
 }
 
+/* Flex container for main content */
 main {
     display: flex;
 }
 
+/* Sidebar (left) styling */
 .slideLeft {
     width: 15rem;
     height: 100vh;
@@ -25,6 +28,7 @@ main {
     transition: 0.3s;
 }
 
+/* Profile information container in the sidebar */
 .profileInfo {
     width: 100%;
     display: flex;
@@ -33,6 +37,7 @@ main {
     justify-content: center;
 }
 
+/* Profile photo container */
 .profilePhoto {
     width: 5rem;
     aspect-ratio: 1;
@@ -41,29 +46,34 @@ main {
     background-color: rgb(255, 255, 255);
 }
 
+/* Profile name styling */
 .profileName {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
+/* Menu list container in the sidebar */
 .menuList {
     width: 100%;
     text-align: center;
     padding: 1rem 0;
 }
 
+/* General anchor (link) styling */
 a {
     color: inherit;
     text-decoration: none;
     z-index: 1;
 }
 
+/* Hover effect for menu items and control buttons */
 .menuList:hover,
 .ControleButton button:hover {
     background-color: #11343d;
 }
 
+/* Right side content area styling */
 .contentRight {
     height: 100vh;
     width: calc(100% - 15rem);
@@ -73,6 +83,7 @@ a {
     background-color: #ebebeb00;
 }
 
+/* Gallery container styling */
 .gallery {
     width: 90%;
     margin: 1rem;
@@ -88,11 +99,14 @@ a {
     flex-wrap: wrap;
 }
 
-.gallery .addCat,  .gallery form{
+/* Add category button and form styling inside the gallery */
+.gallery .addCat,  .gallery form {
     width: 22%;
     height: 8rem;
     margin-bottom: 1.5rem;
 }
+
+/* Styling for the add category button */
 .gallery .addCat button {
     width: 3rem;
     aspect-ratio: 1;
@@ -107,10 +121,13 @@ a {
     align-items: center;
     justify-content: center;
 }
-.gallery .addCat button:hover{
+
+/* Hover effect for the add category button */
+.gallery .addCat button:hover {
     background-color: #11343d;
 }
 
+/* Category list and addCat container */
 .gallery .catList,
 .addCat {
     width: 100%;
@@ -127,6 +144,7 @@ a {
     flex-direction: column;
 }
 
+/* Input fields inside category list */
 .gallery .catList input {
     font-size: 0.9rem;
     padding: 0.5rem 0.5rem;
@@ -138,15 +156,20 @@ a {
     field-sizing: content;
 }
 
+/* Controls section inside the category list (for update/delete actions) */
 .gallery .catList .controls {
     width: 99%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.gallery .catList .controls a:hover{
+
+/* Hover effect for control links inside the category list */
+.gallery .catList .controls a:hover {
     background-color: #11343d;
 }
+
+/* Styling for the upload button inside the controls */
 .gallery .catList .controls .upload {
     width: 3rem;
     aspect-ratio: 1;
@@ -162,6 +185,7 @@ a {
     justify-content: center;
 }
 
+/* Styling for delete, update, ok, cancel buttons inside controls */
 .gallery .catList .controls .delete,
 .gallery .catList .controls .update,
 .gallery .catList .controls .ok,
@@ -180,24 +204,30 @@ a {
     align-items: center;
     justify-content: center;
 }
-.act{
+
+/* Activate class for controls display */
+.act {
     display: flex !important;
 }
-.gallery .catList .controls .ok:hover{
+
+/* Hover effect for the OK button */
+.gallery .catList .controls .ok:hover {
     background-color: #72cd7a !important;
 }
-.gallery .catList .controls .cancel:hover{
+
+/* Hover effect for the cancel button */
+.gallery .catList .controls .cancel:hover {
     background-color: #c96262 !important;
 }
-.gallery .catList .controls .ok button{
-    color: inherit;
-}
-.actInput{
+
+/* Styling for input when active */
+.actInput {
     border: 1px solid rgb(218, 218, 218)!important;
     background: #1d1d1d95 !important;
     border-radius: 0.4rem !important;
 }
 
+/* Create user form container */
 .createUser {
     width: 40rem;
     border-radius: 1rem;
@@ -211,27 +241,29 @@ a {
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-
 }
 
+/* Form title styling */
 .createUser div h2 {
     font-size: 2rem;
     margin: 0;
 }
 
+/* Styling for sign-in fields inside the create user form */
 .createUser .signinField {
     display: flex;
     flex-direction: column;
     width: 70%;
-
 }
 
+/* Form styling inside sign-in field */
 .createUser .signinField form {
     display: flex;
     flex-direction: column;
 }
 
-.createUser .signinField form>input {
+/* Input fields styling inside the form */
+.createUser .signinField form > input {
     font-size: 1rem;
     padding: 0.5rem 0;
     margin: 0.4rem 0 1rem 0;
@@ -242,6 +274,7 @@ a {
     background: none;
 }
 
+/* Button styling inside the create user form */
 .createUser div button {
     font-size: 1rem;
     margin: 1rem;
@@ -252,10 +285,12 @@ a {
     background-color: rgba(167, 167, 167, 0.5);
 }
 
+/* Hover effect for the form button */
 .createUser div button:hover {
-    background-color: #11343d
+    background-color: #11343d;
 }
 
+/* Users section container */
 .users {
     width: 95%;
     margin: 1rem;
@@ -270,31 +305,37 @@ a {
     align-items: center;
 }
 
+/* Alternating background color for odd rows in user list */
 .list ul:nth-child(odd) {
-    background-color: rgba(128, 128, 128, 0.349);
+    background-color: rgba(255, 255, 255, 0.137);
 }
 
+/* General list container */
 .list {
     width: 98%;
     margin: 1rem;
     display: table;
 }
 
+/* List rows as table rows */
 .list ul {
     display: table-row;
     transition: .3s;
 }
 
+/* Editable list row styling */
 .list ul.editable {
     background-color: #1f1f1f62;
 }
 
+/* Styling for the first list row (header) */
 .list ul:first-child li {
     background-color: rgba(232, 229, 229, 0.2);
     font-size: 1rem;
     padding-left: 0.8rem;
 }
 
+/* Styling for input elements in list */
 .list input {
     font-size: 0.9rem;
     padding: 0.2rem 0.5rem;
@@ -305,47 +346,55 @@ a {
     field-sizing: content;
 }
 
+/* Remove outline from input on focus */
 input:focus {
     outline: none;
 }
 
+/* Styling for error messages or alerts */
 small {
     color: rgb(255, 97, 97);
 }
 
+/* Active input styling */
 .list .inputActive {
     color: #e7e7e7;
     background: #cecece95;
     border-radius: 0.4rem;
 }
 
+/* Edit button container styling */
 .edit {
     display: flex !important;
     align-items: center;
     justify-content: center;
 }
 
+/* Styling for edit links */
 .edit a {
     font-size: 1.2rem;
     padding: 0.2rem 0.3rem;
     margin: 0 0.3rem;
 }
 
+/* Icon styling within edit button */
 .edit ion-icon {
     color: rgb(224, 224, 224) !important;
 }
 
+/* Hover effect for edit icons */
 .edit ion-icon:hover {
     color: rgb(255, 255, 255) !important;
 }
 
-
+/* Table cell layout for list items */
 .list ul>li {
     display: table-cell;
     padding: .5rem .5rem;
     vertical-align: middle;
 }
 
+/* Styling for buttons within anchor elements */
 a button {
     background: none;
     border: none;
@@ -355,6 +404,7 @@ a button {
     justify-content: center;
 }
 
+/* Different button classes, hidden by default */
 .update,
 .profile,
 .upload,
@@ -365,10 +415,12 @@ a button {
     cursor: pointer;
 }
 
+/* Activate buttons when needed */
 .active {
     display: flex;
 }
 
+/* Popup modal background */
 .popUp {
     position: absolute;
     top: 0;
@@ -382,6 +434,7 @@ a button {
     z-index: 1;
 }
 
+/* Content inside popup modal */
 .popUpContent {
     width: 50%;
     height: 40%;
@@ -393,16 +446,19 @@ a button {
     flex-direction: column;
 }
 
+/* Text styling within popup modal */
 .popUpContent p {
     text-align: center;
 }
 
+/* Button container within popup modal */
 .popUpContent div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Popup modal buttons */
 .popUpContent div a {
     padding: 0.5rem 1rem;
     margin: 0 1rem;
@@ -413,16 +469,19 @@ a button {
     align-items: center;
 }
 
+/* Hover effect for popup modal buttons */
 .popUpContent div a:hover {
     background-color: rgb(41, 41, 41);
     border: none;
 }
 
+/* Special hover effect for first button in popup */
 .popUpContent div a:first-child:hover {
     background-color: rgb(112, 35, 35);
     border: none;
 }
 
+/* Responsive design for screens smaller than 1000px */
 @media screen and (max-width:1000px) {
     .slideLeft {
         width: 10rem;
@@ -437,9 +496,9 @@ a button {
     .list {
         width: 90%;
     }
-
 }
 
+/* Responsive design for screens smaller than 860px */
 @media screen and (max-width:860px) {
     .slideLeft {
         position: fixed;
@@ -462,6 +521,7 @@ a button {
     }
 }
 
+/* Responsive design for screens smaller than 675px */
 @media screen and (max-width:675px) {
     .contentRight {
         align-items: start;
@@ -472,6 +532,7 @@ a button {
         height: 40%;
     }
 
+    /* List item styling in mobile view */
     .list ul {
         border: solid 1px #ccc;
         border-radius: 1rem;
@@ -481,15 +542,18 @@ a button {
         padding: .5em 1em;
     }
 
+    /* Hide first row in mobile view */
     .list ul:first-child {
         display: none;
     }
 
+    /* List items as block elements in mobile view */
     .list ul>li {
         display: block;
         padding: .25em 0;
     }
 
+    /* Add label before list items in mobile view */
     .list ul>li:before {
         color: #ffffff;
         content: attr(data-label);
@@ -499,11 +563,13 @@ a button {
         width: 50%;
     }
 
+    /* Align delete button to the left */
     .deleteButton {
         text-align: start;
     }
 
-    .gallery .addCat,.gallery form{
+    /* Gallery form styling in mobile view */
+    .gallery .addCat, .gallery form {
         width: 48%;
     }
 }

@@ -1,6 +1,6 @@
 <?php
  // Include the admin controller
-require 'controllers/adminCtrl.php';
+require '../controllers/adminCtrl.php';
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ require 'controllers/adminCtrl.php';
 <body>
     <main>
         <!-- Include the sidebar or control panel -->
-        <?php include "ui/controlSlide.php"; ?>
+        <?php include "../ui/controlSlide.php"; ?>
         <!-- Container for the main content -->
         <div class="contentRight">
             <!-- Main content will go here -->

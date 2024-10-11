@@ -23,7 +23,7 @@
             <div class="headLeft">
                 <div class="headName">Madhavan</div>
                 <div class="headDescrip">a photographer</div>
-                <button id="headButton">Contact me</button>
+                <button onclick="location.href = 'contact.php';" id="headButton">Contact me</button>
             </div>
 
             <!-- Right side decorative triangle elements for design -->

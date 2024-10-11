@@ -1,6 +1,6 @@
 <?php
 // Include the controller for handling image uploads, deletions, and other logic.
-require 'controllers/uploadCtrl.php';
+require '../controllers/uploadCtrl.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,20 +20,17 @@ require 'controllers/uploadCtrl.php';
         <div id="slideLeft" class="slideLeft">
             <!-- Menu burger button for toggling sidebar -->
             <button id="menuBurger">
-                <!-- Icon for the burger menu -->
                 <div id="burgerDiv" class="burgerDiv"></div>
             </button>
-
             <!-- Profile information displayed in the sidebar -->
             <div class="profileInfo">
                 <!-- Display user's first uploaded profile photo -->
                 <div class="profilePhoto">
-                    <img src="assets/img/uploads/<?= $listOfUserPhotos[0]->name ?>" alt="photos">
+                    <img src="../assets/img/uploads/<?= $listOfUserPhotos[0]->name ?>" alt="photos">
                 </div>
                 <!-- Display the user's first name dynamically -->
                 <div class="profileName">profile of <?= $userProfile->firstname ?></div>
             </div>
-
             <!-- Navigation links in the sidebar -->
             <div>
                 <!-- Link to go back to the user list -->
@@ -97,7 +94,7 @@ require 'controllers/uploadCtrl.php';
                     <?php for ($i = 0; $i < sizeof($listOfUserPhotos); $i++) { ?>
                         <div class="photoCard">
                             <!-- Image element displaying uploaded photo -->
-                            <img src="assets/img/uploads/<?= $listOfUserPhotos[$i]->name ?>" alt="photos">
+                            <img src="../assets/img/uploads/<?= $listOfUserPhotos[$i]->name ?>" alt="photos">
                             <!-- Button to delete the individual photo -->
                             <a href="upload.php?userId=<?= $listOfUserPhotos[$i]->id_user ?>&&category=<?= $listOfUserPhotos[$i]->id_category ?>&&idPhoto=<?= $listOfUserPhotos[$i]->id ?>">
                                 <button>

@@ -3,6 +3,8 @@
 const containerRight = document.getElementById('containerRight');
 // Array to hold the dynamically created columns
 let columns = [];
+// Variable to keep track of the current category
+let currentCategory = 'all';
 
 // Function to find the column with the smallest height
 const getSmallColumns = () => {
@@ -38,10 +40,13 @@ const initColumns = (noOfColumns) => {
         });
     }
     // Add images to the columns
-    setImg('all');
+    setImg(currentCategory);
 }
 
-// Function to set images into the columns
+/**
+ * Function to set images into the columns
+ * @param {string} category category to display
+ */
 const setImg = (category) => {
     // Clear columns before adding new images
     columns.forEach(column => column.html.innerHTML = '');
@@ -52,9 +57,10 @@ const setImg = (category) => {
         if (category == 'all' || images[i].category == category) {
             // Create a div element to hold the image
             const imageDiv = document.createElement('div');
-            imageDiv.innerHTML = `<img src="assets/img/uploads/${images[i].name}" alt="sportImage">`;
+            imageDiv.innerHTML = `<img src="../assets/img/uploads/${images[i].name}" alt="Image">`;
             // Find the column with the smallest height and add the image to it
             const small = getSmallColumns();
+
             small.height += images[i].height;
             small.html.appendChild(imageDiv);
         }
@@ -65,6 +71,7 @@ const categories = document.getElementsByClassName('category'); // Select all el
 
 for (let i = 0; i < categories.length; i++) { // Loop through each category element
     categories[i].addEventListener('click', () => { // Add a click event listener to the current category
+        currentCategory = categories[i].getAttribute('id_cat');
         setImg(categories[i].getAttribute('id_cat')); // Call setImg function with the category's id attribute
     });
 }

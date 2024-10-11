@@ -1,8 +1,8 @@
 <?php
 // Include the admin controller
-require 'controllers/adminCtrl.php';
+require '../controllers/adminCtrl.php';
 // Include the category controller
-require 'controllers/categoryCtrl.php';
+require '../controllers/categoryCtrl.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ require 'controllers/categoryCtrl.php';
 <body>
     <main>
         <!-- Include the sidebar or control panel -->
-        <?php include "ui/controlSlide.php"; ?>
+        <?php include "../ui/controlSlide.php"; ?>
 
         <!-- Container for the main content -->
         <div class="contentRight">

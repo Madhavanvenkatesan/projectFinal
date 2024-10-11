@@ -1,23 +1,31 @@
 <?php
-require 'models/Photo.php'; // Include the Photo model for handling image data
-require 'models/Category.php'; // Include the Category model for handling category data
+require '../models/Photo.php'; 
+require '../models/Category.php'; 
 
-$photo = new Photo(); // Create an instance of the Photo class
-$category = new Category(); // Create an instance of the Category class
+// Create an instance of the Photo class
+$photo = new Photo(); 
+// Create an instance of the Category class
+$category = new Category(); 
 
-$allCategory = $category->getAllCategoryExceptUser(); // Retrieve all categories except those associated with the user
-$photoData = []; // Initialize an array to hold photo data
+// Retrieve all categories except those associated with the user
+$allCategory = $category->getAllCategoryExceptUser(); 
+// Initialize an array to hold photo data
+$photoData = []; 
 
-foreach ($allCategory as $cat) { // Loop through each category
-    $photo->id_category = $cat->id; // Set the current category ID in the Photo instance
-    foreach ($photo->getAllPhotosOfCategory() as $value) { // Retrieve all photos for the current category
+foreach ($allCategory as $cat) { 
+    // Set the current category ID in the Photo instance
+    $photo->id_category = $cat->id; 
+    // Retrieve all photos for the current category
+    foreach ($photo->getAllPhotosOfCategory() as $value) { 
 
-        $imageSize = getimagesize('./assets/img/uploads/' . $value->name); // Get the size of the image
+        // Get the size of the image
+        $imageSize = getimagesize('../assets/img/uploads/' . $value->name); 
 
-        if (!empty($imageSize)) { // Check if the image size is valid
+        // Check if the image size is valid
+        if (!empty($imageSize)) { 
             $data = [
                 'name' => $value->name, // Store the image name
-                'height' => $imageSize[1], // Store the image height
+                'height' => $imageSize[1] / $imageSize[0], // Store the image with ratio by divising height by width (1 heighr and 0 width)
                 'category' => $value->id_category, // Store the category ID of the image
             ];
 

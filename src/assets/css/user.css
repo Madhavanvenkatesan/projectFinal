@@ -1,22 +1,26 @@
+/* Body background color and font settings */
 body {
     background-color: #f3f3f3;
     color: white;
     font-size: 0.9rem;
 }
 
+/* Anchor tag inherits parent color and has no text decoration */
 a {
     color: inherit !important;
     text-decoration: none;
 }
 
+/* Flexbox container for the main layout */
 main {
     display: flex;
 }
 
+/* Sidebar with a blurred background and transition effect */
 .slideLeft {
     width: 15rem;
     height: 100vh;
-    background-color: rgba(6, 75, 49, 0.806);
+    background-color: #064B31CE;
     backdrop-filter: blur(0.8rem);
     display: flex;
     flex-direction: column;
@@ -24,6 +28,7 @@ main {
     transition: 0.3s;
 }
 
+/* Profile section with centered content */
 .profileInfo {
     width: 100%;
     display: flex;
@@ -32,6 +37,7 @@ main {
     justify-content: center;
 }
 
+/* Circular profile photo container */
 .profilePhoto {
     width: 5rem;
     aspect-ratio: 1;
@@ -43,27 +49,32 @@ main {
     justify-content: center;
     overflow: hidden;
 }
-.profilePhoto img{
+/* Ensures the profile image fits within the container */
+.profilePhoto img {
     width: 100%;
     object-fit: contain;
 }
 
+/* Profile name styling with larger font and centered text */
 .profileName {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
+/* Menu list styling for centered text and padding */
 .menuList {
     width: 100%;
     text-align: center;
     padding: 1rem 0;
 }
 
+/* Hover effect for the menu items */
 .menuList:hover {
     background-color: #28493a;
 }
 
+/* Right content section with scrollable content and flexible layout */
 .contentRight {
     height: 100vh;
     width: calc(100% - 15rem);
@@ -75,6 +86,7 @@ main {
     flex-direction: column;
 }
 
+/* Download button container aligned to the right */
 .download {
     width: 100%;
     display: flex;
@@ -82,6 +94,7 @@ main {
     justify-content: end;
 }
 
+/* Download button styling */
 .download button {
     margin: 1rem;
     padding: 0.6rem;
@@ -91,7 +104,12 @@ main {
     background-color: #517062;
     cursor: pointer;
 }
+/* Download button styling */
+.download button:hover {
+    background-color: #68917e;
+}
 
+/* Flexbox container for gallery images */
 .gallery .images {
     display: flex;
     align-items: center;
@@ -99,6 +117,7 @@ main {
     flex-wrap: wrap;
 }
 
+/* Styling for individual gallery image containers */
 .gallery .images div {
     width: 20%;
     aspect-ratio: 1;
@@ -113,71 +132,86 @@ main {
     position: relative;
 }
 
+/* Image inside the gallery container with hover transform effect */
 .gallery .images div img {
     width: 100%;
     object-fit: contain;
     transition: transform 0.5s;
 }
 
+/* Scale effect when hovering over images */
 .gallery .images div img:hover {
     transform: scale(1.05);
 }
 
+/* Selected state for images with reduced brightness */
 .selected {
     filter: brightness(40%);
 }
-#download,#cancel{
+
+/* Hidden download and cancel buttons */
+#download, #cancel {
     display: none;
 }
 
 @media screen and (max-width:1000px) {
+    /* Adjust sidebar width for screens smaller than 1000px */
     .slideLeft {
         width: 10rem;
     }
 
+    /* Adjust content width based on sidebar */
     .contentRight {
         width: calc(100% - 10rem);
     }
 }
 
 @media screen and (max-width:860px) {
+    /* Sidebar is hidden and positioned off-screen for smaller screens */
     .slideLeft {
         position: absolute;
         left: -10rem;
         z-index: 1;
     }
-
+    
+    /* Sidebar active state bringing it back to view */
     .slideLeftActive {
         left: 0rem;
     }
 
+    /* Burger menu positioning */
     #menuBurger {
         position: absolute;
         display: flex;
         right: -3rem;
     }
 
+    /* Burger menu bar styling */
     .burgerDiv,
     .burgerDiv::after,
     .burgerDiv::before {
         background-color: #28493a;
     }
 
+    /* Full-width content when sidebar is hidden */
     .contentRight {
         width: 100%;
     }
 
+    /* Resize gallery images for smaller screens */
     .gallery .images div {
         width: 26%;
     }
 }
 
 @media screen and (max-width:675px) {
+    /* Gallery adjusts to column layout for very small screens */
     .gallery {
         flex-direction: column;
         width: 100%;
     }
 
+    /* Larger image size for small screens */
     .gallery .images div {
         width: 40%;
     }

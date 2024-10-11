@@ -1,5 +1,5 @@
 <!-- Include the gallery controller for data handling -->
-<?php require 'controllers/galleryCtrl.php' ?> 
+<?php require '../controllers/galleryCtrl.php' ?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +15,7 @@
 <body>
     <header>
             <!-- import nav bar from UI -->
-            <?php include "ui/nav.php"; ?>
+            <?php include "../ui/nav.php"; ?>
     </header>
     <main>
         <div class="containerLeft">

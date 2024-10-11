@@ -1,22 +1,26 @@
+/* General body styling */
 body {
     background-color: #f3f3f3;
     color: white;
     font-size: 0.9rem;
 }
 
+/* Links inherit text color and remove underline */
 a {
     color: inherit !important;
     text-decoration: none;
 }
 
+/* Main container flex layout */
 main {
     display: flex;
 }
 
+/* Sidebar (slideLeft) styling */
 .slideLeft {
     width: 15rem;
     height: 100vh;
-    background-color: rgba(6, 75, 49, 0.806);
+    background-color:#064B31CE;
     backdrop-filter: blur(0.8rem);
     display: flex;
     flex-direction: column;
@@ -24,6 +28,7 @@ main {
     transition: 0.3s;
 }
 
+/* Profile info section inside sidebar */
 .profileInfo {
     width: 100%;
     display: flex;
@@ -32,6 +37,7 @@ main {
     justify-content: center;
 }
 
+/* Profile photo styling */
 .profilePhoto {
     width: 5rem;
     aspect-ratio: 1;
@@ -43,33 +49,41 @@ main {
     justify-content: center;
     overflow: hidden;
 }
-.profilePhoto img{
+
+/* Profile photo image styling */
+.profilePhoto img {
     width: 100%;
     object-fit: contain;
 }
 
+/* Profile name text styling */
 .profileName {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
+/* Menu list in sidebar */
 .menuList {
     width: 100%;
     text-align: center;
     padding: 1rem 0;
 }
 
+/* Hover effect for menu list */
 .menuList:hover {
     background-color: #28493a;
 }
 
+/* Main content area */
 .contentRight {
     height: 100vh;
     width: calc(100% - 15rem);
     overflow: scroll;
     position: relative;
 }
+
+/* Delete button container */
 .delete {
     width: 100%;
     display: flex;
@@ -77,6 +91,7 @@ main {
     justify-content: end;
 }
 
+/* Delete button styling */
 .delete button {
     margin: 1rem;
     padding: 0.6rem;
@@ -86,6 +101,8 @@ main {
     background-color: #954d4d;
     cursor: pointer;
 }
+
+/* Error message styling */
 .error {
     min-width: 40%;
     height: 3rem;
@@ -102,6 +119,7 @@ main {
     justify-content: center;
 }
 
+/* Arrow for error message */
 .error div {
     width: 0;
     height: 0;
@@ -114,6 +132,7 @@ main {
     transform: translateX(-50%);
 }
 
+/* Gallery images grid */
 .gallery .images {
     display: flex;
     align-items: center;
@@ -121,6 +140,7 @@ main {
     flex-wrap: wrap;
 }
 
+/* Individual gallery image container */
 .gallery .images div {
     width: 20%;
     aspect-ratio: 1;
@@ -135,11 +155,13 @@ main {
     position: relative;
 }
 
+/* General image styling */
 img {
     width: 100%;
     object-fit: contain;
 }
 
+/* Photo card button styling */
 .photoCard button {
     width: 1.3rem;
     height: 1.3rem;
@@ -157,19 +179,23 @@ img {
     background-color: #f3f3f3;
 }
 
+/* Show button on hover */
 .photoCard:hover button {
     display: flex;
 }
 
+/* Hover effect for photo card button */
 .photoCard button:hover {
     background-color: rgba(32, 144, 101, 0.806);
     color: #f3f3f3;
 }
 
+/* Icon inside photo card button */
 .photoCard button ion-icon {
     font-size: 1.5rem;
 }
 
+/* Form styling */
 form {
     height: 100%;
     display: flex;
@@ -178,6 +204,7 @@ form {
     flex-direction: column;
 }
 
+/* Add photos button styling */
 .addPhotos {
     position: relative;
     overflow: hidden;
@@ -188,6 +215,7 @@ form {
     box-shadow: 3px 3px 15px 5px rgb(215, 215, 215);
 }
 
+/* Hidden file input for photo upload */
 .addPhotos input {
     width: 100%;
     height: 75%;
@@ -198,6 +226,7 @@ form {
     background-color: white;
 }
 
+/* Button inside add photos container */
 .addPhotos button {
     width: 70%;
     height: 15%;
@@ -209,13 +238,12 @@ form {
     bottom: 3%;
 }
 
+/* Hover effect for add photos button */
 .addPhotos button:hover {
     background-color: #28493a;
 }
 
-
-
-
+/* Responsive styling for screens smaller than 1000px */
 @media screen and (max-width:1000px) {
     .slideLeft {
         width: 10rem;
@@ -226,6 +254,7 @@ form {
     }
 }
 
+/* Responsive styling for screens smaller than 860px */
 @media screen and (max-width:860px) {
     .slideLeft {
         position: absolute;
@@ -253,17 +282,21 @@ form {
         width: 100%;
     }
 
+    /* Adjust gallery image size */
     .gallery .images div {
         width: 26%;
     }
 }
 
+/* Responsive styling for screens smaller than 675px */
 @media screen and (max-width:675px) {
+    /* Adjust gallery layout for mobile */
     .gallery {
         flex-direction: column;
         width: 100%;
     }
 
+    /* Adjust gallery image size for mobile */
     .gallery .images div {
         width: 40%;
     }

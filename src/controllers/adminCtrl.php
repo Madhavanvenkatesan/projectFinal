@@ -1,8 +1,11 @@
 <?php
 session_start();
 if (empty($_SESSION['id']) || empty($_SESSION['id_role']))
-    header('Location: /');
+// Redirect to index if session ID or role is empty
+    header('Location: /'); 
 
-//checke if the user is an administrator
+// Check if the user is an administrator
 if ($_SESSION['id_role'] !== 1)
-    header('Location: /');
+// Redirect to index if the user is not an administrator
+    header('Location: /'); 
+
