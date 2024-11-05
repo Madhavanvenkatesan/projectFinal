@@ -8,8 +8,9 @@ if (empty($_SESSION['id']) || empty($_SESSION['id_role']) || $_SESSION['id_role'
 
 // Check if the form is submitted and the 'type' field is present in the POST request
 if (!empty($_POST) && !empty($_POST['type'])) {
-    require '../models/User.php'; // Include the User model
-    $user = new User(); // Create a new instance of the User class
+    // Include the User model
+    require '../models/User.php'; 
+    $user = new User(); 
 
     // If the request is to create a new user
     if ($_POST['type'] == 'create') {
@@ -22,10 +23,10 @@ if (!empty($_POST) && !empty($_POST['type'])) {
                 // If 'firstname' length is between 3 and 30 characters, sanitize and assign it
                 $user->firstname = htmlspecialchars($_POST['firstname']);
             } else {
-                $error['firstname'] = 'Entre 3 et 30 caracteres'; // Add error message for invalid length
+                $error['firstname'] = 'Entre 3 et 30 caracteres'; 
             }
         } else {
-            $error['firstname'] = 'Prenom obligatoire'; // Add error if 'firstname' is missing
+            $error['firstname'] = 'Prenom obligatoire'; 
         }
 
         // Validate the 'lastname' field
@@ -37,7 +38,7 @@ if (!empty($_POST) && !empty($_POST['type'])) {
                 $error['lastname'] = 'Entre 3 et 30 caracteres'; // Add error message for invalid length
             }
         } else {
-            $error['lastname'] = 'Prenom obligatoire'; // Add error if 'lastname' is missing
+            $error['lastname'] = 'Prenom obligatoire';
         }
 
         // Validate the 'email' field
@@ -58,7 +59,7 @@ if (!empty($_POST) && !empty($_POST['type'])) {
                 $error['email'] = 'Entre 3 et 100 caracteres'; // Add error if email length is invalid
             }
         } else {
-            $error['email'] = 'email obligatoire'; // Add error if 'email' is missing
+            $error['email'] = 'email obligatoire'; 
         }
 
         // Validate the 'password' field
@@ -74,7 +75,7 @@ if (!empty($_POST) && !empty($_POST['type'])) {
                 $error['confirmPassword'] = 'Confirmation de mot de passe obligatoire'; // Add error if confirmation is missing
             }
         } else {
-            $error['password'] = 'Mot de passe obligatoire'; // Add error if 'password' is missing
+            $error['password'] = 'Mot de passe obligatoire';
         }
 
         // If there are no errors, proceed with user registration

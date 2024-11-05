@@ -6,7 +6,7 @@ $photo = new Photo();
 $category = new Category();
 
 // Create new category
-if (!empty($_GET) && !empty($_GET['newCat']) && !empty($_GET['newCat'] == 'new')) {
+if (!empty($_GET) && !empty($_GET['newCat']) && $_GET['newCat'] == 'new') {
     $category->name = "New Category"; // Set the new category name by default
     $category->createCategory(); // Create the category in the database
     // Redirect to the category page after creation
@@ -50,8 +50,8 @@ if (!empty($_GET) && !empty($_GET['cat_id'])) {
 
 // Update existing category
 if (!empty($_POST) && !empty($_POST['update'])) {
-    $category->id = $_POST['update'];
-    $category->name = $_POST['category'];
+    $category->id = filter_var($_POST['update'], FILTER_VALIDATE_INT);
+    $category->name = htmlspecialchars($_POST['category']);
     $category->updateCategory();
     // Redirect to category page after update
     header('Location: category.php'); 

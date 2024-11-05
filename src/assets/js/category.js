@@ -8,10 +8,9 @@ const update = document.getElementsByClassName('update');
 // Add an event listener to each "update" button to allow editing the category
 for (let i = 0; i < update.length; i++) {
     update[i].addEventListener('click', (e) => {
-        e.preventDefault();  // Prevent the default form submission or link behavior
-
-        nonEditableAll();     // Set all other fields to non-editable
-        editable(i);          // Make the clicked field editable
+        e.preventDefault();  
+        nonEditableAll();     
+        editable(i);        
     });
 };
 
@@ -19,7 +18,7 @@ for (let i = 0; i < update.length; i++) {
 const cancel = document.getElementsByClassName('cancel');
 for (let i = 0; i < cancel.length; i++) {
     cancel[i].addEventListener('click', () => {
-        nonEditable(i, true);  // Set the field to non-editable and reset the values
+        nonEditable(i, true); 
     });
 }
 
@@ -41,7 +40,7 @@ const nonEditableAll = () => {
 
 // This function makes a specific category field editable
 const editable = (i) => {
-    const control = lists[i].querySelectorAll('a');  // Get all action buttons for the current list item
+    const control = lists[i].querySelectorAll('a'); 
     
     // Hide the first 3 buttons (edit,delete and upload) during editing
     for (let x = 0; x < 3; x++) {
@@ -65,13 +64,13 @@ const editable = (i) => {
     // Enable the input fields to allow editing
     for (let y = 0; y < inputs.length; y++) {
         inputs[y].disabled = false;
-        inputs[y].classList.add('actInput');  // Apply a class to visually indicate editable fields
+        inputs[y].classList.add('actInput'); 
     }
 }
 
 // This function makes a specific category field non-editable
 const nonEditable = (i, reset = false) => {
-    const control = lists[i].querySelectorAll('a');  // Get all action buttons for the current list item
+    const control = lists[i].querySelectorAll('a'); 
 
     // Show the first 3 buttons (edit,delete and upload)
     for (let x = 0; x < 3; x++) {
@@ -93,6 +92,6 @@ const nonEditable = (i, reset = false) => {
     // Disable the input fields to prevent editing
     for (let y = 0; y < inputs.length; y++) {
         inputs[y].disabled = true;
-        inputs[y].classList.remove('actInput');  // Remove the class that indicates editable fields
+        inputs[y].classList.remove('actInput'); 
     }
 }

@@ -49,8 +49,8 @@ require '../controllers/categoryCtrl.php';
                 <div class="addCat">
                     <p>Add Category</p>
                     <a href="category.php?newCat=new">
-                        <!-- Button to add a category -->
-                        <button><ion-icon name="add-outline"></ion-icon></button>
+                        <!-- click to add a category -->
+                        <div><ion-icon name="add-outline"></ion-icon></div>
                     </a>
                 </div>
 
@@ -95,7 +95,8 @@ require '../controllers/categoryCtrl.php';
 
     <script src="assets/js/script.js"></script> <!-- Main JavaScript file -->
     <script src="assets/js/category.js"></script> <!-- JavaScript for gallery upload functionality -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> <!-- Ionicons for icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <!-- Ionicons for icons -->
 </body>
 
 </html>

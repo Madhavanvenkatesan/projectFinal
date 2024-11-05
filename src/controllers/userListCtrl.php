@@ -24,9 +24,14 @@ if (!empty($_GET) && !empty($_GET['userId'])) {
 
 if (!empty($_GET) && !empty($_GET['deleteId'])) {
     // Set the user ID to be deleted
-    $user->id = $_GET['deleteId']; 
-    // Call the delete method from the User model
-    $user->delete(); 
+    $user->id = $_GET['deleteId'];
+
+    $userData = $user->getUserById();
+    //if admin do not delete
+    if ($userData->id_role !== 1) {
+        // Call the delete method from the User model
+        $user->delete();
+    }
 }
 
 // Handle user update

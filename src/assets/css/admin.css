@@ -8,7 +8,6 @@ body {
     position: relative;
 }
 
-/* Flex container for main content */
 main {
     display: flex;
 }
@@ -37,7 +36,6 @@ main {
     justify-content: center;
 }
 
-/* Profile photo container */
 .profilePhoto {
     width: 5rem;
     aspect-ratio: 1;
@@ -46,14 +44,12 @@ main {
     background-color: rgb(255, 255, 255);
 }
 
-/* Profile name styling */
 .profileName {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
 }
 
-/* Menu list container in the sidebar */
 .menuList {
     width: 100%;
     text-align: center;
@@ -83,7 +79,6 @@ a {
     background-color: #ebebeb00;
 }
 
-/* Gallery container styling */
 .gallery {
     width: 90%;
     margin: 1rem;
@@ -100,14 +95,15 @@ a {
 }
 
 /* Add category button and form styling inside the gallery */
-.gallery .addCat,  .gallery form {
+.gallery .addCat,
+.gallery form {
     width: 22%;
     height: 8rem;
     margin-bottom: 1.5rem;
 }
 
 /* Styling for the add category button */
-.gallery .addCat button {
+.gallery .addCat div {
     width: 3rem;
     aspect-ratio: 1;
     margin: 0.5rem 0;
@@ -123,7 +119,7 @@ a {
 }
 
 /* Hover effect for the add category button */
-.gallery .addCat button:hover {
+.gallery .addCat div:hover {
     background-color: #11343d;
 }
 
@@ -156,7 +152,7 @@ a {
     field-sizing: content;
 }
 
-/* Controls section inside the category list (for update/delete actions) */
+/* Controls section inside the category*/
 .gallery .catList .controls {
     width: 99%;
     display: flex;
@@ -222,7 +218,7 @@ a {
 
 /* Styling for input when active */
 .actInput {
-    border: 1px solid rgb(218, 218, 218)!important;
+    border: 1px solid rgb(218, 218, 218) !important;
     background: #1d1d1d95 !important;
     border-radius: 0.4rem !important;
 }
@@ -263,7 +259,7 @@ a {
 }
 
 /* Input fields styling inside the form */
-.createUser .signinField form > input {
+.createUser .signinField form>input {
     font-size: 1rem;
     padding: 0.5rem 0;
     margin: 0.4rem 0 1rem 0;
@@ -351,12 +347,11 @@ input:focus {
     outline: none;
 }
 
-/* Styling for error messages or alerts */
+/* Styling for error messages */
 small {
     color: rgb(255, 97, 97);
 }
 
-/* Active input styling */
 .list .inputActive {
     color: #e7e7e7;
     background: #cecece95;
@@ -370,19 +365,20 @@ small {
     justify-content: center;
 }
 
-/* Styling for edit links */
 .edit a {
     font-size: 1.2rem;
     padding: 0.2rem 0.3rem;
     margin: 0 0.3rem;
 }
 
-/* Icon styling within edit button */
+.edit a.disabled {
+    display: none;
+}
+
 .edit ion-icon {
     color: rgb(224, 224, 224) !important;
 }
 
-/* Hover effect for edit icons */
 .edit ion-icon:hover {
     color: rgb(255, 255, 255) !important;
 }
@@ -469,13 +465,11 @@ a button {
     align-items: center;
 }
 
-/* Hover effect for popup modal buttons */
 .popUpContent div a:hover {
     background-color: rgb(41, 41, 41);
     border: none;
 }
 
-/* Special hover effect for first button in popup */
 .popUpContent div a:first-child:hover {
     background-color: rgb(112, 35, 35);
     border: none;
@@ -498,8 +492,8 @@ a button {
     }
 }
 
-/* Responsive design for screens smaller than 860px */
-@media screen and (max-width:860px) {
+/* Responsive design for screens smaller than 920px */
+@media screen and (max-width:920px) {
     .slideLeft {
         position: fixed;
         left: -10rem;
@@ -521,8 +515,8 @@ a button {
     }
 }
 
-/* Responsive design for screens smaller than 675px */
-@media screen and (max-width:675px) {
+/* Responsive design for screens smaller than 760px */
+@media screen and (max-width:760px) {
     .contentRight {
         align-items: start;
     }
@@ -532,7 +526,6 @@ a button {
         height: 40%;
     }
 
-    /* List item styling in mobile view */
     .list ul {
         border: solid 1px #ccc;
         border-radius: 1rem;
@@ -569,7 +562,8 @@ a button {
     }
 
     /* Gallery form styling in mobile view */
-    .gallery .addCat, .gallery form {
+    .gallery .addCat,
+    .gallery form {
         width: 48%;
     }
 }

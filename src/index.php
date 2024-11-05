@@ -58,6 +58,9 @@
                 <div class="item" style="background-image:url(./assets/img/portrait5.jpg);"></div>
                 <div class="item" style="background-image:url(./assets/img/portrait6.jpg);"></div>
                 <div class="item" style="background-image:url(./assets/img/portrait7.jpg);"></div>
+                <div class="item" style="background-image:url(./assets/img/portrait8.jpg);"></div>
+                <div class="item" style="background-image:url(./assets/img/portrait9.jpg);"></div>
+                
             </div>
 
             <!-- Carousel navigation buttons for previous/next slides -->

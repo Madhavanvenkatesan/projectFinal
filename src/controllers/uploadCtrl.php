@@ -169,7 +169,3 @@ if (!empty($_POST) && !empty($_POST['deleteAll'])) {
 $photo->id_category = filter_var($_GET['category'], FILTER_SANITIZE_NUMBER_INT);
 $photo->id_user = filter_var($_GET['userId'], FILTER_SANITIZE_NUMBER_INT);
 $listOfUserPhotos = $photo->getPhotosByUserIdAndCat();
-
-
-// Display list of photos
-$listOfUserPhotos = $photo->getPhotosByUserIdAndCat();

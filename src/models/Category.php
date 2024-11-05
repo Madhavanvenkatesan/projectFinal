@@ -1,12 +1,11 @@
 <?php
 // Import the Database class for database connection
-require_once '../models/Database.php'; 
+require_once '../models/Database.php';
 
 class Category extends Database
 {
     public $id;   // Stores the ID of the category
     public $name; // Stores the name of the category
-
     /**
      * Retrieves all categories except the one with ID 6.
      *
@@ -14,14 +13,13 @@ class Category extends Database
      */
     public function getAllCategoryExceptUser()
     {
-         // SQL query
+        // SQL query
         $query = "SELECT * FROM `yuga_category` WHERE `id` != 6";
         // Prepare the query for execution
         $queryExecute = $this->db->query($query);
-         // Execute the query and return the result
+        // Execute the query and return the result
         return $queryExecute->fetchAll(PDO::FETCH_OBJ);
     }
-
     /**
      * Creates a new category in the database.
      *
@@ -44,7 +42,7 @@ class Category extends Database
     {
         $query = "DELETE FROM `yuga_category` WHERE `id` = :id";
         $queryExecute = $this->db->prepare($query);
-        $queryExecute->bindValue(':id', $this->id, PDO::PARAM_STR);
+        $queryExecute->bindValue(':id', $this->id, PDO::PARAM_INT);
         return $queryExecute->execute();
     }
 
