@@ -1,4 +1,4 @@
-// This variable stores the last edited category, so the user can reset it if needed
+// This variable stores the last edited category, so the user can reset the input field if needed
 lastEditedCategory = null;
 
 // Get all category lists and update buttons

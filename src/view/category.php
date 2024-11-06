@@ -78,7 +78,7 @@ require '../controllers/categoryCtrl.php';
                                     <ion-icon name="create-outline"></ion-icon>
                                 </a>
                                 <!--link for validate a changes on category name-->
-                                <a class="ok" href="category.php?idCat=<?= $cat->id ?>">
+                                <a class="ok">
                                     <button class="validate-button" type="submit" name="update" value="<?= $cat->id ?>">
                                         <ion-icon name="checkmark-circle-outline"></ion-icon>
                                     </button>

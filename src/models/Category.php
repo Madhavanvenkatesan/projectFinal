@@ -55,7 +55,7 @@ class Category extends Database
     {
         $query = "UPDATE `yuga_category` SET `name`=:name WHERE `id` = :id;";
         $queryExecute = $this->db->prepare($query);
-        $queryExecute->bindValue(':id', $this->id, PDO::PARAM_STR);
+        $queryExecute->bindValue(':id', $this->id, PDO::PARAM_INT);
         $queryExecute->bindValue(':name', $this->name, PDO::PARAM_STR);
         return $queryExecute->execute();
     }

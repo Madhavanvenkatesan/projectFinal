@@ -116,7 +116,7 @@ require '../controllers/userListCtrl.php';
                                     <ion-icon name="cloud-upload"></ion-icon>
                                 </a>
                                 <!--Link to delete user -->
-                                <a class="delete active <?= $listOfUsers[$i]->id_role !== 1 ? '' : 'disabled' ?>"
+                                <a class="delete active <?= $listOfUsers[$i]->id_role == 1 ? 'disabled' : '' ?>"
                                     href="userList.php?userId=<?= $listOfUsers[$i]->id ?>">
                                     <ion-icon name="trash-outline"></ion-icon>
                                 </a>
